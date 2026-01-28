@@ -365,6 +365,40 @@ Remove these filler words/sounds from transcripts:
 - If next word/sentence starts with lowercase → use comma: `Yeah,`
 - For standalone subtitle entries ending in `,.` → change to `.`
 
+**Fix misplaced commas (use common sense):**
+The API often inserts commas where sentences should end or continue without pause. Review and fix:
+
+- **Comma before complete thought** → should be period:
+  - Wrong: `We built this tool, It helps with transcription.`
+  - Right: `We built this tool. It helps with transcription.`
+
+- **Comma breaking a natural phrase** → remove comma:
+  - Wrong: `We are going to, talk about this.`
+  - Right: `We are going to talk about this.`
+
+- **Comma at end of subtitle entry** → usually should be period:
+  - Wrong: `And that's what we're building,`
+  - Right: `And that's what we're building.`
+  - Exception: Keep comma if the thought clearly continues in the next entry
+
+- **Use logic to identify sentence boundaries:**
+  - Complete subject + verb + object = likely end of sentence
+  - Transitional words after comma (So, And, But, Because) often signal new sentence
+  - Questions should end with `?` not `,`
+  - Statements of fact typically end with `.`
+
+**Examples of common fixes:**
+```
+Wrong: "So we built this, And then we tested it,"
+Right: "So we built this. And then we tested it."
+
+Wrong: "What do you think about that, I think it's great,"
+Right: "What do you think about that? I think it's great."
+
+Wrong: "The competition is, based on Bittensor,"
+Right: "The competition is based on Bittensor."
+```
+
 ### Project-Specific Corrections
 
 Create a `corrections.txt` in your project folder for additional project-specific terms:
