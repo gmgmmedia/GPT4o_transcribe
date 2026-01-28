@@ -1,0 +1,476 @@
+1
+00:00:39,168 --> 00:00:41,468
+Thank you. And thank you for having me in this beautiful office.
+
+2
+00:00:41,568 --> 00:00:42,568
+It's super cool.
+
+3
+00:00:54,938 --> 00:00:55,488
+Yeah.
+
+4
+00:00:55,538 --> 00:01:01,838
+So Synth is essentially a probabilistic intelligence layer for asset prices.
+
+5
+00:01:01,938 --> 00:01:13,338
+So we focus very much on getting people to forecast price path distributions versus trying to forecast just individual prices in the future.
+
+6
+00:01:13,438 --> 00:01:14,288
+Which is.
+
+7
+00:01:14,228 --> 00:01:39,628
+Is pretty common for most kind of like yeah finance competitions trading competitions a lot a lot of them are focused on like point predictions some point in the future and we're focused on distributions so you know you've really got to try and forecast where the price will go and how it will go there so yeah the competition is based on Bittensor as a subnet.
+
+8
+00:01:41,150 --> 00:01:42,250
+Competitors.
+
+9
+00:01:43,250 --> 00:01:47,200
+Submit a thousand paths or Monte Carlo simulations.
+
+10
+00:01:48,450 --> 00:01:53,250
+Every hour on a continuous basis and are scored on, .
+
+11
+00:01:53,350 --> 00:02:00,000
+How accurate their distributions are to the actual price. So it's live, it's ongoing.
+
+12
+00:02:01,400 --> 00:02:02,100
+And yeah.
+
+13
+00:02:02,200 --> 00:02:04,350
+Super excited to, you know.
+
+14
+00:02:04,400 --> 00:02:04,850
+Expand.
+
+15
+00:02:05,900 --> 00:02:09,100
+The different people that can access the competition by working with Crunch.
+
+16
+00:02:47,198 --> 00:02:51,748
+We've spent a lot of time being my co-founder Sam, like building out different trading systems.
+
+17
+00:02:51,898 --> 00:02:54,898
+Especially in crypto decentralized finance.
+
+18
+00:02:56,298 --> 00:03:00,548
+We've also competed in competitions in the past like Numerai competition.
+
+19
+00:03:01,332 --> 00:03:07,932
+And we really like the idea that, you know, you can get you can crowdsource intelligence.
+
+20
+00:03:08,382 --> 00:03:10,482
+And for us there.
+
+21
+00:03:10,632 --> 00:03:12,132
+You know, around a year ago.
+
+22
+00:03:12,182 --> 00:03:20,332
+We started to think about what would agents and LLMs that are going to be like the primary users of markets in the future, what do they need?
+
+23
+00:03:20,582 --> 00:03:24,132
+And they already have access to like all the historical data they could want.
+
+24
+00:03:25,182 --> 00:03:28,682
+And they're very good at answering questions about historical data.
+
+25
+00:03:28,788 --> 00:03:54,938
+But LLMs agents aren't very good at answering questions about the future so can you create this intelligence layer that they can tap into to answer questions better about the future and for this you want to have get an open competition or you want to have a lot of competitors who can kind of create a really robust data layer intelligence layer that people can tap into and yeah
+
+26
+00:03:55,764 --> 00:04:07,514
+For that you need to have a very transparent scoring mechanism you need to make sure it's fair and you need to make sure the participants are well paid and yeah we think we've achieved a lot of those things with synth and we now have a very competitive environment.
+
+27
+00:04:08,664 --> 00:04:23,064
+With high reward like roughly around a hundred thousand dollars per month in rewards going out to participants which is cool and we have really strong data sets that yeah agents can tap into but we've also seen like.
+
+28
+00:04:23,412 --> 00:04:24,662
+Trading firms.
+
+29
+00:04:24,862 --> 00:04:25,612
+Different traders.
+
+30
+00:04:25,762 --> 00:04:29,412
+People who do risk management also tapping into this data.
+
+31
+00:04:30,260 --> 00:04:34,410
+Um and you can apply it to like options markets prediction markets and yeah it's cool.
+
+32
+00:05:49,532 --> 00:06:00,332
+Yeah, so we use continuous rank probability scoring system. So you're continuously ranked on how close your distributions are to the actual price movement.
+
+33
+00:06:00,832 --> 00:06:07,632
+And this rewards people who are confident and like very confident in their distribution and are correct.
+
+34
+00:06:07,882 --> 00:06:10,632
+It punishes people who are confident and incorrect.
+
+35
+00:06:11,124 --> 00:06:16,174
+And people who are vague, the more vague you are, the more likely you are to have a very mediocre score.
+
+36
+00:06:16,874 --> 00:06:21,874
+And the subnet is weighted to people who have, you know, accurate predictions.
+
+37
+00:06:22,124 --> 00:06:24,024
+Accurate forecasts of distributions.
+
+38
+00:06:24,124 --> 00:06:25,974
+They receive the most rewards.
+
+39
+00:06:26,024 --> 00:06:27,024
+So yeah.
+
+40
+00:06:27,074 --> 00:06:29,524
+It's quite hard to cheat.
+
+41
+00:06:29,624 --> 00:06:31,874
+There's also like a negative cost.
+
+42
+00:06:31,924 --> 00:06:35,774
+So if you try and do things like register lots of participants.
+
+43
+00:06:36,174 --> 00:06:36,774
+Then.
+
+44
+00:06:37,140 --> 00:07:03,090
+Um it's very unlikely that will be successful some will get deregistered and there's a cost to that so yeah we found that like the scoring mechanism has kind of evolved over time it's got a lot more robust and yet it's it's in a in a great position right now so yeah people should you know we call it like a proper scoring rule like the best you know the the optimal strategy is to try and really
+
+45
+00:07:04,564 --> 00:07:12,514
+Try and be as accurate as possible from the very beginning and just improve your model over time. And it's very likely you're going to do well.
+
+46
+00:07:19,164 --> 00:07:19,264
+Exactly.
+
+47
+00:08:46,408 --> 00:08:49,908
+I think that's what we love about working with Crunch is that.
+
+48
+00:08:50,516 --> 00:09:09,366
+It's making the the subnet more expect more accessible making the competition much more accessible and we're discussing as well earlier like there's so many more tools available now and you don't have to be an expert in finance by any means to enter the competition right especially through crunch you can.
+
+49
+00:09:09,876 --> 00:09:22,626
+You know just have skills from different industries and this is a great place to learn about yeah time series Monte Carlo simulations and modeling so yeah it's very exciting.
+
+50
+00:09:25,402 --> 00:09:25,452
+Yeah.
+
+51
+00:09:43,902 --> 00:09:44,302
+Yeah.
+
+52
+00:09:53,624 --> 00:09:54,724
+Yeah, absolutely.
+
+53
+00:09:54,824 --> 00:09:55,524
+So firstly.
+
+54
+00:09:55,624 --> 00:09:58,974
+Like it is very competitive, like because the prices are significant.
+
+55
+00:09:59,074 --> 00:10:06,924
+That's roughly like 80 to $100,000 per month in rewards going out to participants. So yeah.
+
+56
+00:10:06,974 --> 00:10:08,074
+The prizes are significant.
+
+57
+00:10:08,324 --> 00:10:11,424
+So yeah, there is a lot of competition.
+
+58
+00:10:12,324 --> 00:10:12,424
+Yeah.
+
+59
+00:10:12,824 --> 00:10:14,824
+Real players are coming in. And yeah.
+
+60
+00:10:14,924 --> 00:10:16,924
+Some of them have also worked at, you know.
+
+61
+00:10:17,748 --> 00:10:22,098
+Various places where they've got some experience with this but.
+
+62
+00:10:23,476 --> 00:10:49,076
+Yeah the the the quality of the data over the last few months has improved like a lot we ran an experiment on polymarket where we're trading some binary binary up down yes yes no up down markets and we had an account i think it started around 3000 turned into 60 to 70 000 and yeah i mean recently like that was cool.
+
+63
+00:10:49,268 --> 00:10:53,018
+Recently we've seen some interesting behavior on the market.
+
+64
+00:10:53,168 --> 00:10:54,818
+On Polymarket.
+
+65
+00:10:55,368 --> 00:10:59,368
+So we created a dashboard, we created some tools so people can...
+
+66
+00:11:00,052 --> 00:11:16,252
+Yeah use or they can you know see if there's any discrepancies between Synth's probabilistic forecasts and the Polymarket prices on certain markets which can help them with their own trading so yeah we're also very excited about yeah.
+
+67
+00:11:21,652 --> 00:11:25,702
+Yeah yeah we saw last last week around a week ago.
+
+68
+00:11:26,036 --> 00:11:41,236
+Um someone was moving the price of BTC to try and win markets they also moving the price of XRP you know just like 10 20 seconds before the end of the market and we were seeing a lot of discrepancy in you know.
+
+69
+00:11:42,260 --> 00:12:07,760
+This potentially caused a lot of like automated systems that didn't have like this level of data to lose money so yeah we think that like probabilistic forecasts that they can be useful for a huge amount of kind of yeah things across trading across risk management you can you know integrate this data into like automated trading systems options market so yeah.
+
+70
+00:12:08,052 --> 00:12:09,252
+There's a lot of applications.
+
+71
+00:12:09,552 --> 00:12:10,552
+But as you said.
+
+72
+00:12:10,652 --> 00:12:15,802
+The key is to have a great competition so really great strong robust data comes out of it.
+
+73
+00:12:53,252 --> 00:12:58,252
+I think like we've seen like we've seen a lot of demand for crypto data.
+
+74
+00:12:58,352 --> 00:13:14,602
+But we've added equities and we think that there's going to be a huge amount of demand for like 24-7 data across equities as we see like stock exchanges that they're all moving to become 24-5.
+
+75
+00:13:16,452 --> 00:13:17,402
+Exactly. Yeah.
+
+76
+00:13:17,940 --> 00:13:18,240
+Yeah.
+
+77
+00:13:19,090 --> 00:13:21,140
+So 24 hour trading is coming.
+
+78
+00:13:21,240 --> 00:13:22,740
+No sleep in 2026.
+
+79
+00:13:24,490 --> 00:13:25,640
+Yeah, we didn't have in.
+
+80
+00:13:25,690 --> 00:13:25,940
+2025.
+
+81
+00:13:28,340 --> 00:13:30,040
+Yeah, too long.
+
+82
+00:13:32,640 --> 00:13:33,290
+Exactly.
+
+83
+00:13:33,590 --> 00:13:33,940
+Exactly.
+
+84
+00:13:34,090 --> 00:13:36,240
+So like, there's gonna be this big regime shift.
+
+85
+00:13:36,290 --> 00:13:38,140
+Right where equities come onchain.
+
+86
+00:13:38,240 --> 00:13:40,790
+I think probabilistic data is going to become a lot more important.
+
+87
+00:13:42,772 --> 00:13:44,972
+And we're seeing a lot of demand for this people.
+
+88
+00:13:45,022 --> 00:13:49,572
+Yeah, using the data within like risk management systems within trading systems.
+
+89
+00:13:50,122 --> 00:13:54,672
+I also think that the way that we have like this new.
+
+90
+00:13:55,284 --> 00:14:22,484
+Kind of group of pro retail traders emerging so people who have started using different tools like different technologies to start trading so maybe it's you know building their own algorithms or maybe they're using Claude to create like more complex trading strategies than they used to have maybe they're integrating different data sets into their trading strategies I think this trend is going to continue over the the coming year.
+
+91
+00:14:22,996 --> 00:14:33,596
+Um and so yeah there'll be more demand for probabilistic data for sure i think it's creating like this perfect storm so yeah we're in a good position but yeah no sleep in 2026.
+
+92
+00:14:51,914 --> 00:14:52,264
+It sounds.
+
+93
+00:14:52,564 --> 00:14:52,764
+Yeah.
+
+94
+00:15:04,064 --> 00:15:04,964
+Good question.
+
+95
+00:15:05,714 --> 00:15:07,714
+In total, we have nine assets.
+
+96
+00:15:07,764 --> 00:15:09,964
+So we may add more in the future.
+
+97
+00:15:11,892 --> 00:15:37,242
+Like we may also like we like our goal is to create this like this kind of broad intelligence layer right so we definitely will add some more assets kind of based on demand we're seeing like silver is in demand right now it's had great performance recently so potentially adding in silver models in the future we might add in more equities we're pretty open.
+
+98
+00:15:37,652 --> 00:15:46,952
+Uh to kind of responding to demand but right now we've just added in some equity so we'll make sure that performance is good there and then yeah we'll see in the near future.
+
+99
+00:15:55,302 --> 00:16:02,952
+Yes so i think like the key thing is to really think about like this is a volatility modeling competition
+
+100
+00:16:03,572 --> 00:16:05,772
+Volatility is based on multiple factors.
+
+101
+00:16:05,922 --> 00:16:07,072
+But right now.
+
+102
+00:16:08,628 --> 00:16:16,978
+Volatility is very much based on different news events so reacting to those news events or having ways to bring that data into your model is very important.
+
+103
+00:16:18,578 --> 00:16:18,778
+Yeah.
+
+104
+00:16:18,928 --> 00:16:32,578
+Exactly so news is moving the market significantly so yeah I think it's key to like try and bring in different news news feeds social media data into your models that can really help performance.
+
+105
+00:16:38,784 --> 00:16:39,184
+Yeah.
+
+106
+00:16:39,284 --> 00:16:39,334
+Yeah.
+
+107
+00:16:41,434 --> 00:16:53,584
+So Pyth Pyth is the the price data and the yeah the oracle we use it's very robust they're yeah they have a great system but yeah for your modeling like.
+
+108
+00:16:54,260 --> 00:16:56,410
+You know, you can explore different data sets.
+
+109
+00:16:56,510 --> 00:16:58,360
+Right? As many different data sets as possible.
+
+110
+00:17:00,110 --> 00:17:01,010
+And yeah.
+
+111
+00:17:01,060 --> 00:17:03,360
+You mentioned that that's also now possible.
+
+112
+00:17:39,114 --> 00:17:39,314
+Solana.
+
+113
+00:17:41,564 --> 00:17:41,864
+So.
+
+114
+00:17:52,430 --> 00:17:53,080
+Amazing.
+
+115
+00:18:31,204 --> 00:18:31,854
+That's, yeah.
+
+116
+00:19:23,914 --> 00:19:24,264
+Awesome.
+
+117
+00:19:24,314 --> 00:19:25,064
+Let's do it.
+
+118
+00:19:25,164 --> 00:19:25,914
+Super excited.
+
+119
+00:19:26,914 --> 00:19:27,864
+Thank you so much.
+

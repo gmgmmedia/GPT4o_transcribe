@@ -1,0 +1,96 @@
+1
+00:00:00,000 --> 00:00:02,150
+[A] How much is solving the coordination problem?
+
+2
+00:00:02,150 --> 00:00:09,300
+[B] The scale that they have among this huge community of data machine learning engineers. All of the value creation is happening today.
+
+3
+00:00:09,300 --> 00:00:19,050
+[C] They're using the tools of decentralized markets and stable coins to create a broad community to generate better real world outcomes than the best of the best data science team.
+
+4
+00:00:19,050 --> 00:00:23,000
+[A] What makes Crunch different is that it's just built in the open.
+
+5
+00:00:23,050 --> 00:00:24,400
+[A] Balance for talent limit this?
+
+6
+00:00:24,400 --> 00:00:26,350
+[B] When we look at what type of teams we want to.
+
+7
+00:00:26,292 --> 00:00:35,792
+[B] Want to bring into the sauna incubator the first thing we always start with is founder john John had been working on this problem in this design space for years prior to AI becoming interesting and exciting.
+
+8
+00:00:36,092 --> 00:00:41,042
+[B] Is the type of founder where any time of day he's pinging you he's working with his team.
+
+9
+00:00:41,242 --> 00:00:44,892
+[C] Dynamism of Jean on the one hand, his ability to form good partnerships,.
+
+10
+00:00:45,092 --> 00:00:49,192
+[C] And then on the other side, the remainder of the team, a real technical know-how.
+
+11
+00:00:49,292 --> 00:00:52,142
+[B] Trunch has the ability to be a foundational layer.
+
+12
+00:00:52,276 --> 00:00:55,926
+[B] Where and how organizations solve problems,.
+
+13
+00:00:56,126 --> 00:00:59,176
+[B] Period. Any institution out there has data challenges.
+
+14
+00:00:59,226 --> 00:01:03,926
+[B] And if you can be the one-stop shop to power solutions and insights on those data,.
+
+15
+00:01:03,976 --> 00:01:06,976
+[B] You can really scale your company almost infinitely.
+
+16
+00:01:06,976 --> 00:01:17,076
+[A] Anybody around the world can participate in this. And it could be that we're giving somebody a better future because they can find a job and do remote through a marketplace like Crunch.
+
+17
+00:01:17,076 --> 00:01:19,176
+[B] The phrase I would use to describe Crunch is.
+
+18
+00:01:19,700 --> 00:01:20,600
+[B] Egalitarian.
+
+19
+00:01:20,600 --> 00:01:21,400
+[A] Catalyst.
+
+20
+00:01:21,400 --> 00:01:23,500
+[C] Internet's open machine learning infrastructure.
+
+21
+00:01:23,550 --> 00:01:27,150
+[A] Catalyst for building this internet-native future.
+
+22
+00:01:27,150 --> 00:01:35,800
+[C] It allows businesses who wouldn't necessarily have access to top machine learning talent and models to access that in an open and permissionless environment.
+
+23
+00:01:35,800 --> 00:01:45,800
+[B] What Crunch is enabling is fundamentally something that is a counter to the concentration effects that you see across AI. AI is touching so many different areas.
+
+24
+00:01:45,780 --> 00:02:01,680
+[B] Areas of our economy but crunch is laser focused on this notion of how do we actually help institutions with their machine learning challenges and then for companies who maybe have a few machine learning engineers but they want to take their insights to the next level look into crunch and see how it can help you drive solutions for your business.
+
