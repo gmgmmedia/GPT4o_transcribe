@@ -23,3 +23,21 @@ CrunchDAO podcast episode featuring discussion about CrunchDAO and SynthData (Bi
 - Jean's name is French and may be transcribed as "john", "John", or "Gene"
 - Crypto terms like "onchain" should be one word
 - Ticker symbols may have underscores inserted (e.g., "U_S_D_C_" instead of "USDC")
+
+## Project-Specific Corrections
+
+Apply these find/replace corrections for this project:
+
+| Find | Replace | Notes |
+|------|---------|-------|
+| `gems community` | `James' community` | Mishearing of "James'" |
+| `john` | `Jean` | French name |
+| `John` | `Jean` | French name |
+| `Gene` | `Jean` | French name |
+
+## Speaker Mapping
+
+| Label | Speaker | Role |
+|-------|---------|------|
+| `[A]` | Jean | Host (CrunchDAO CEO) |
+| `[B]` | James | Guest (SynthData team) |

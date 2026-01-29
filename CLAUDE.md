@@ -102,74 +102,375 @@ Location: `projects/{name}/sources.md`
 [Any relevant excerpts or summaries]
 ```
 
-## Step 4: Transcribe and Auto-Correct
+## Step 4: Transcribe and Post-Process
 
-After context is prepared:
+After context is prepared, Claude performs the following steps:
 
-1. **Run transcription**:
-   ```bash
-   python3 transcribe.py input/{audio_file} --project {name}
-   ```
+### 4.1 Run Transcription
 
-2. **Apply post-processing corrections automatically**:
-   - Review the Known Error Patterns section below
-   - Apply corrections for crypto terms, project names, ticker symbols, etc.
-   - Use the project's context.md terminology list to guide corrections
-   - Common fixes: Bittensor, Synth, Pyth, ticker capitalization, onchain
+```bash
+python3 transcribe.py input/{audio_file} -o projects/{name}/transcripts/{audio_file}.srt
+```
 
-3. **Split by speaker** (if multiple speakers detected):
-   - Create separate SRT files for each speaker: `{filename}_speaker_A.srt`, `{filename}_speaker_B.srt`, etc.
-   - Remove the `[A]`, `[B]` prefixes from the split files
-   - Renumber subtitles sequentially in each file
-   - Name files using speaker names from context.md when available (e.g., `{filename}_Jean.srt`, `{filename}_James.srt`)
+### 4.2 Run Post-Processing Script
 
-4. **Inform user of completion**:
-   ```
-   Transcription complete!
+Use the `process_srt.py` script to automatically apply corrections and split by speaker:
 
-   Main transcript: projects/{name}/transcripts/{audio_file}.srt
+```bash
+python3 process_srt.py projects/{name}/transcripts/{audio_file}.srt --split-speakers
+```
 
-   Speaker files:
-   - projects/{name}/transcripts/{audio_file}_Jean.srt (Speaker A)
-   - projects/{name}/transcripts/{audio_file}_James.srt (Speaker B)
+This script automatically:
+- Removes filler words (um, uh, yeah as filler)
+- Fixes duplicate words (the the → the)
+- Splits long segments at natural break points
+- Separates speakers into individual files
 
-   Post-processing corrections applied:
-   - [List corrections made]
-   ```
+Then rename speaker files to use names from context.md:
+```bash
+mv {filename}_speaker_A.srt {filename}_{Speaker1Name}.srt
+mv {filename}_speaker_B.srt {filename}_{Speaker2Name}.srt
+```
+
+### 4.3 Manual Review and Corrections
+
+After automated processing, review the output and apply:
+
+1. **Tier 1 corrections** (universal - check any missed patterns)
+2. **Tier 2 corrections** (crypto/finance domain)
+3. **Tier 3 corrections** (from project's context.md)
+4. **Punctuation fixes** using heuristics below
+5. **Write the corrected SRT file** (overwrite)
+
+### 4.4 Split by Speaker (if not using script)
+
+If manually processing without the script:
+1. Create separate SRT files: `{filename}_speaker_A.srt`, `{filename}_speaker_B.srt`
+2. Remove the `[A]`, `[B]` prefixes from the split files
+3. Renumber subtitles sequentially in each file
+4. Name files using speaker names from context.md when available (e.g., `{filename}_{SpeakerName}.srt`)
+
+### 4.5 Report Completion
+
+```
+Transcription complete!
+
+Main transcript: projects/{name}/transcripts/{audio_file}.srt
+
+Speaker files:
+- projects/{name}/transcripts/{audio_file}_{Speaker1Name}.srt (Speaker A, N segments)
+- projects/{name}/transcripts/{audio_file}_{Speaker2Name}.srt (Speaker B, N segments)
+
+Post-processing applied:
+- Filler words removed
+- Duplicate words fixed
+- Segments split (target: 45-55 chars, 4-5 sec max)
+- [List any manual corrections made]
+```
 
 **IMPORTANT:** Always apply post-processing corrections AND split by speaker automatically after transcription. Do not wait for user to ask.
+
+---
+
+## Post-Processing Correction Tables
+
+Claude applies corrections in tiers. Read through the SRT content and apply these find/replace operations.
+
+### Tier 1: Universal Corrections (Always Apply)
+
+These fix API artifacts and universal patterns:
+
+| Find | Replace | Notes |
+|------|---------|-------|
+| ` um ` | ` ` | Filler word (with spaces) |
+| ` uh ` | ` ` | Filler word (with spaces) |
+| `Um, ` | `` | Filler at start |
+| `Uh, ` | `` | Filler at start |
+| `managed. Managed` | `managed` | Duplicate word |
+| `a in a` | `a` | Duplicate word |
+| `the the` | `the` | Duplicate word |
+| `kind of and and` | `kind of and` | Duplicate word |
+| `We lot of` | `A lot of` | API artifact |
+| `X_R_P_` | `XRP` | Ticker underscore artifact |
+| `U_S_D_C_` | `USDC` | Ticker underscore artifact |
+| `E_T_H_` | `ETH` | Ticker underscore artifact |
+| `B_T_C_` | `BTC` | Ticker underscore artifact |
+| `,.` | `.` | Punctuation artifact |
+| `..` | `.` | Punctuation artifact |
+| `  ` | ` ` | Double space |
+
+**Redundant Starters (remove when at beginning of segment):**
+| Find | Replace |
+|------|---------|
+| `Yeah. ` | `` |
+| `So yeah, ` | `` |
+| `And yet ` | `` |
+
+**Year Corrections (auto-expand 2-digit years):**
+| Find | Replace |
+|------|---------|
+| `in 25` | `in 2025` |
+| `in 26` | `in 2026` |
+| `in 24` | `in 2024` |
+| `in 23` | `in 2023` |
+
+### Tier 2: Domain Corrections (Crypto/Finance)
+
+Apply these corrections for crypto/finance audio:
+
+**Crypto Project Names:**
+| Find | Replace |
+|------|---------|
+| `Potenza` | `Bittensor` |
+| `potenza` | `Bittensor` |
+| `bit tensor` | `Bittensor` |
+| `Bit Tensor` | `Bittensor` |
+| `Sint` | `Synth` |
+| `scent` | `Synth` |
+| `since` (in data context) | `Synth` |
+| `Numerize` | `Numerai` |
+| `numerous competition` | `Numerai competition` |
+| `numeri` | `Numerai` |
+| `pith` | `Pyth` |
+| `PITH` | `Pyth` |
+| `Pith` | `Pyth` |
+| `piss` (oracle context) | `Pyth` |
+| `peace` (oracle context) | `Pyth` |
+| `Data from peace` | `Data from Pyth` |
+| `crunchdoor` | `CrunchDAO` |
+| `crunch door` | `CrunchDAO` |
+| `Monette` | `Monad` |
+| `Monet` | `Monad` |
+| `sauna` | `Solana` |
+| `Sauna` | `Solana` |
+| `more markets` | `MoreMarkets` |
+
+**Ticker Symbols (capitalize):**
+| Find | Replace |
+|------|---------|
+| `btc` | `BTC` |
+| `xrp` | `XRP` |
+| `eth` | `ETH` |
+| `sol` | `SOL` |
+| `usdc` | `USDC` |
+| `usdt` | `USDT` |
+
+**Acronyms:**
+| Find | Replace |
+|------|---------|
+| `llms` | `LLMs` |
+| ` ai ` | ` AI ` |
+| ` TE ` | ` TEE ` |
+| ` te ` (tech context) | ` TEE ` |
+| `TEEs` | `TEEs` |
+
+**Platform Names (capitalize):**
+| Find | Replace |
+|------|---------|
+| `crunch` | `Crunch` |
+| `synth` | `Synth` |
+| `cruncher` | `Cruncher` |
+| `discord` | `Discord` |
+| `twitter` | `Twitter` |
+| `polymarket` | `Polymarket` |
+| `claude` | `Claude` |
+| `Cruncher.com` | `crunchdao.com` |
+| `cruncher.com` | `crunchdao.com` |
+
+**Compound Words:**
+| Find | Replace |
+|------|---------|
+| `on chain` | `onchain` |
+| `on-chain` | `onchain` |
+
+**Common Mishearings:**
+| Find | Replace |
+|------|---------|
+| `quantum algorithm` | `quant algorithm` |
+| `quantum researchers` | `quant researchers` |
+| `its founder` (when referring to a person) | `his founder` |
+| `from peace` | `from Pyth` |
+
+### Tier 3: Project Corrections (From context.md)
+
+Read the project's `context.md` file and apply corrections based on:
+- **Speaker names** listed in the Speakers section
+- **Terminology** listed in the Terminology section
+- **Project-Specific Corrections** table if present
+
+The project's context.md may contain a corrections table like:
+```markdown
+## Project-Specific Corrections
+| Find | Replace | Notes |
+|------|---------|-------|
+| `misheard_word` | `correct_word` | Context |
+```
+
+Apply these corrections after Tier 1 and Tier 2.
+
+---
+
+## Punctuation Heuristics
+
+The API frequently places commas where periods should be. Apply these fixes:
+
+**Comma → Period before capitalized transitionals:**
+
+| Find | Replace |
+|------|---------|
+| `, So ` | `. So ` |
+| `, And ` | `. And ` |
+| `, But ` | `. But ` |
+| `, Because ` | `. Because ` |
+| `, You ` | `. You ` |
+| `, We ` | `. We ` |
+| `, It's ` | `. It's ` |
+| `, They ` | `. They ` |
+| `, For ` | `. For ` |
+| `, With ` | `. With ` |
+
+---
+
+## Automatic Formatting Rules
+
+These patterns are converted automatically (moved from manual review):
+
+**Money Formatting:**
+| Find | Replace | Notes |
+|------|---------|-------|
+| `hundred thousand dollars per month` | `$100K a month` | Shorthand format |
+| `hundred thousand dollars` | `$100,000` | Standard format |
+| `eighty thousand` | `$80,000` | When in money context |
+| `sixty to seventy thousand` | `$60,000 to $70,000` | Range format |
+| `three thousand` | `$3,000` | When in money context |
+| `80 to 100 000` | `$80,000 to $100,000` | Number range with spaces |
+
+**Number Ranges:**
+| Find | Replace |
+|------|---------|
+| `10, 20 seconds` | `10-20 seconds` |
+| `10. 20 seconds` | `10-20 seconds` |
+
+**Time Expressions:**
+| Find | Replace |
+|------|---------|
+| `24-7` | `24/7` |
+| `24-5` | `24/5` |
+
+---
+
+## Preserve Natural Speech
+
+Do NOT change these informal speech patterns:
+- `gonna` (keep, do not expand to "going to")
+- `wanna` (keep)
+- `kinda` (keep)
+- `gotta` (keep)
+- `'cause` (keep)
+- `trynna` (keep)
+- `like` as filler (keep for authenticity)
+
+---
 
 ## Project Structure Reference
 
 ```
 projects/
 └── {project_name}/
-    ├── context.md     # Terminology, speakers, topic info (user reference only)
+    ├── context.md     # Terminology, speakers, topic info
     ├── sources.md     # Research links and notes
-    └── transcripts/   # Output SRT files (with speaker diarization)
+    └── transcripts/   # Output SRT files
 ```
 
-## Example Interaction
+---
 
-**User:** I need to transcribe a podcast episode about AI safety
+## Segment Splitting Guidelines
 
-**Claude:** I'll help you set up context for accurate transcription. Let me ask a few questions:
+The API produces long segments (10-30+ seconds). Ideal subtitles have short segments (2-5 seconds, max 60 characters). **Segment splitting is MANDATORY** during post-processing.
 
-1. Is this a new project or should I add to an existing one?
-2. Who are the speakers in this episode?
-3. Are there specific AI safety terms or concepts discussed?
-4. Do you have any links I should research (podcast page, guest bios, etc.)?
+### Target Metrics
 
-**User:** New project called "ai-safety-pod". Guests are Dr. Jane Smith from OpenAI and Bob Johnson from Anthropic. Here's the episode page: [URL]
+| Metric | Target | Max |
+|--------|--------|-----|
+| Duration | 2-4 seconds | 5 seconds |
+| Characters | 40-50 chars | 60 chars |
+| Words | 8-12 words | 15 words |
 
-**Claude:** *[Fetches URL, extracts information, creates context.md and sources.md]*
+### Split Priority (in order)
 
-Done! I've created the project context at `projects/ai-safety-pod/context.md`.
+1. **Sentence boundaries**: Period, question mark, exclamation point
+2. **Clause boundaries**: After commas that precede new clauses
+3. **Conjunction breaks**: Before "and", "but", "so", "because", "or"
+4. **Phrase boundaries**: Before "like", "you know", "I mean", "right"
+5. **Prepositional phrases**: Before "for", "with", "in", "on", "to"
+6. **Natural pauses**: After introductory words ("Yeah", "So", "Well")
 
-To transcribe, run:
-```bash
-python transcribe.py episode.mp3 --project ai-safety-pod
+### Standalone Segments
+
+These should be their own segment when they appear:
+- Single-word responses: "Yeah.", "Right.", "Exactly."
+- Short acknowledgments: "Thank you.", "Yeah, so..."
+- Transitional phrases: "And for us", "So firstly"
+
+### Split Examples
+
+**Example 1 - Sentence + clause breaks:**
 ```
+API: "Thank you. And thank you for having me in this beautiful office. It's super cool."
+```
+Split into 3 segments:
+```
+1. "Thank you."
+2. "And thank you for having me in this beautiful office."
+3. "It's super cool."
+```
+
+**Example 2 - Mid-sentence phrase breaks:**
+```
+API: "So we focus very much on getting people to forecast price path distributions versus trying to forecast just individual prices in the future."
+```
+Split into 4 segments:
+```
+1. "So we focus very much on"
+2. "getting people to forecast price path distributions"
+3. "versus"
+4. "trying to forecast just individual prices in the future."
+```
+
+**Example 3 - Conjunction and clause breaks:**
+```
+API: "Which is pretty common for most kind of like finance competitions, trading competitions. A lot of them are focused on like point predictions some point in the future and we're focused on distributions."
+```
+Split into 5 segments:
+```
+1. "Which is pretty common for most kind of like"
+2. "finance competitions, trading competitions."
+3. "A lot of them are focused on like point predictions"
+4. "some point in the future"
+5. "and we're focused on distributions."
+```
+
+### Timestamp Calculation
+
+When splitting a segment, distribute time proportionally by character count:
+
+```
+Original: 00:00:00,000 --> 00:00:15,000 (15 seconds)
+Text: "First part here. Second part is longer here." (45 chars total)
+
+Segment 1: "First part here." (16 chars = 35.5% = 5.33 sec)
+  → 00:00:00,000 --> 00:00:05,333
+
+Segment 2: "Second part is longer here." (29 chars = 64.5% = 9.67 sec)
+  → 00:00:05,333 --> 00:00:15,000
+```
+
+### Do NOT Split
+
+- In the middle of proper nouns ("Monte Carlo", "New York")
+- In the middle of numbers or amounts ("$80,000 to $100,000")
+- Between article and noun ("the" ... "competition")
+- In the middle of quoted speech
 
 ---
 
@@ -207,222 +508,72 @@ When user says **"compare examples/{name}"**:
 
 4. **Report findings**: Summarize the differences for the user
 
-5. **Update this file**: Add learned patterns to the "Known Error Patterns" section below
+5. **Update this file**: Add learned patterns to the correction tables above
 
-### Example Comparison Interaction
-
-**User:** compare examples/interview-01
-
-**Claude:**
-1. Running transcription...
-2. Comparing interview-01_api.srt vs interview-01.srt...
-3. Found 12 differences:
-   - "John Smith" transcribed as "john smith" (3 occurrences)
-   - "TensorFlow" transcribed as "tensor flow" (2 occurrences)
-   - Missing period at end of sentences (4 occurrences)
-4. Adding patterns to CLAUDE.md...
-
----
-
-## Known Error Patterns
-
-*This section is updated by the comparison workflow. Patterns listed here should be checked during post-processing.*
-
-### Spelling & Capitalization
-
-**Blockchain/Crypto Names:**
-- "Solana" → often transcribed as "sauna" or "Sauna"
-- "Monad" → often transcribed as "Monette", "Monet", or "Monette"
-- "Crunch" → sometimes transcribed as "Trunch" or lowercase "crunch"
-- "MoreMarkets" → transcribed as "more markets" (should be CamelCase)
-- "Infofi" → may appear as "InfoFi" (verify correct casing with project)
-- "Synth" / "SynthData" → often transcribed as "Sint", "scent", or "since"
-- "Bittensor" → often transcribed as "potenza", "Potenza", or "bit tensor"
-- "Numerai" → often transcribed as "Numerize" or "numeri"
-- "Pyth" (oracle) → often transcribed as "pith", "PITH", or "piss"
-- "CrunchDAO" → often transcribed as "crunchdoor" or "crunch door"
-
-**Person Names:**
-- "Jean" (French name) → often transcribed as "john", "John", or "Gene"
-
-**Crypto Ticker Symbols:**
-- API inserts underscores: "X_R_P_" instead of "XRP"
-- API inserts underscores: "U_S_D_C_" instead of "USDC"
-- Post-process to remove underscores from ticker symbols
-- Lowercase tickers should be uppercased: "btc" → "BTC", "xrp" → "XRP", "eth" → "ETH"
-
-**Acronyms:**
-- "llms" → "LLMs" (Large Language Models)
-- "ai" → "AI" (when referring to Artificial Intelligence)
-
-### Punctuation
-
-**Numbers and Percentages:**
-- Written out numbers should often be numeric: "five years, six years" → "5-6 years"
-- Percentages should use symbols: "two, three percent" → "2-3%"
-
-**Compound Words in Crypto Context:**
-- "on chain" → "onchain" (one word in crypto context)
-- "internet-native" vs "internet native" (verify style preference)
-
-**Stylistic Elements:**
-- Corrected transcripts may use special formatting: "quality > quantity" instead of "qualitative, not quantitative"
-- Emphasis may use ALL CAPS: "cracked" → "CRACKED"
-- Colons used for attribution/quotes: "Look guys:" instead of "Look guys,"
-
-### Technical Terms
-
-**Crypto Industry Terms:**
-- "centralized exchanges" → "CEXs" (use abbreviation)
-- "wallet" vs "vault" - verify correct term (these are different concepts)
-- "Intents" - crypto-specific term, ensure capitalized
-
-**Common Mishearings:**
-- "Crunch is solving" → heard as "How much is solving"
-- "Bounds for talent: limitless" → heard as "Balance for talent limit this"
-
-### Speaker Labels
-
-**General Pattern:**
-- API output includes speaker labels: `[A]`, `[B]`, `[C]`
-- Corrected transcripts typically REMOVE speaker labels for cleaner output
-- Use `--no-speakers` flag or post-process to remove labels if desired
-
-**Segmentation:**
-- API produces longer, paragraph-style segments
-- Corrected transcripts use very short, phrase-by-phrase segments (1-2 seconds each)
-- Consider post-processing to split long segments into shorter subtitles
-
-### Informal Speech
-
-**Contractions (preserve or standardize based on project preference):**
-- "going to" vs "gonna"
-- "trying to" vs "trynna"
-- "want to" vs "wanna"
-- "got to" vs "gotta"
-- "because" vs "'cause"
-
-**Stutters and Fillers:**
-- API may capture stutters: "I I want" - decide whether to keep or clean
-- Corrected versions may stylize repeated sounds: "So", "Soo", "Sooo" for effect
-
----
-
-## Post-Processing Workflow
-
-After transcription, apply these corrections based on your project's needs:
-
-### Quick Fixes (Regex-based)
-
-1. **Remove ticker underscores**: `X_R_P_` → `XRP`
-   - Pattern: `([A-Z])_([A-Z])_([A-Z])_?` → `$1$2$3`
-
-2. **Remove speaker labels** (if desired):
-   - Pattern: `^\[.\] ` → `` (empty)
-
-### Common Auto-Corrections (Apply These Automatically)
-
-These corrections should be applied after every transcription:
-```
-Sint|Synth
-scent|Synth
-since probabilistic|Synth's probabilistic
-potenza|Bittensor
-Potenza|Bittensor
-Numerize|Numerai
-pith|Pyth
-PITH|Pyth
-crunchdoor|crunchdao
-on chain|onchain
-btc|BTC
-xrp|XRP
-eth|ETH
-llms|LLMs
-```
-
-### Filler Word Removal (Apply These Automatically)
-
-Remove these filler words/sounds from transcripts:
-- `um` / `Um` / `um,` / `Um,`
-- `uh` / `Uh` / `uh,` / `Uh,`
-
-**Keep these:** `yeah`, `like`, `you know` (natural speech patterns)
-
-**Patterns to clean:**
-- ` um ` → ` ` (space)
-- ` uh ` → ` ` (space)
-- `Um, ` at start → remove
-- `Uh, ` at start → remove
-- Delete entire subtitle entries that contain only fillers like "Um,.", "Uh,.", "Um,", "Uh,"
-- Delete empty entries (just "." or ",") left after filler removal
-- Renumber subtitles sequentially after deletions
-
-### Punctuation Cleanup (Apply These Automatically)
-
-**Fix comma+dot combos (`,."` or `,.`):**
-- `,.` is invalid punctuation - must be either `,` or `.`
-- If next word/sentence starts with uppercase → use period: `Yeah.`
-- If next word/sentence starts with lowercase → use comma: `Yeah,`
-- For standalone subtitle entries ending in `,.` → change to `.`
-
-**Fix misplaced commas (use common sense):**
-The API often inserts commas where sentences should end or continue without pause. Review and fix:
-
-- **Comma before complete thought** → should be period:
-  - Wrong: `We built this tool, It helps with transcription.`
-  - Right: `We built this tool. It helps with transcription.`
-
-- **Comma breaking a natural phrase** → remove comma:
-  - Wrong: `We are going to, talk about this.`
-  - Right: `We are going to talk about this.`
-
-- **Comma at end of subtitle entry** → usually should be period:
-  - Wrong: `And that's what we're building,`
-  - Right: `And that's what we're building.`
-  - Exception: Keep comma if the thought clearly continues in the next entry
-
-- **Use logic to identify sentence boundaries:**
-  - Complete subject + verb + object = likely end of sentence
-  - Transitional words after comma (So, And, But, Because) often signal new sentence
-  - Questions should end with `?` not `,`
-  - Statements of fact typically end with `.`
-
-**Examples of common fixes:**
-```
-Wrong: "So we built this, And then we tested it,"
-Right: "So we built this. And then we tested it."
-
-Wrong: "What do you think about that, I think it's great,"
-Right: "What do you think about that? I think it's great."
-
-Wrong: "The competition is, based on Bittensor,"
-Right: "The competition is based on Bittensor."
-```
-
-### Project-Specific Corrections
-
-Create a `corrections.txt` in your project folder for additional project-specific terms:
-```
-sauna|Solana
-Monette|Monad
-more markets|MoreMarkets
-```
-
-### Manual Review Checklist
-
-- [ ] Verify proper noun capitalization
-- [ ] Check crypto terms against context.md
-- [ ] Review numbers/percentages format
-- [ ] Confirm speaker label mapping (if keeping labels)
-
----
-
-## Adding New Training Examples
+### Adding New Training Examples
 
 1. Place audio file in `examples/` as `{name}.MP3`
 2. Create human-corrected transcript as `{name}.srt`
 3. Run comparison workflow: "compare examples/{name}"
-4. Review findings and update Known Error Patterns section
+4. Review findings and update correction tables
+
+---
+
+## Self-Learning Workflow
+
+When comparing API output to reference transcripts, Claude should automatically:
+
+### Step 1: Identify Patterns
+
+1. Read both API output and reference file(s)
+2. Compare line-by-line for differences
+3. Categorize each difference:
+   - **Terminology**: Misspelled names, technical terms
+   - **Formatting**: Money, numbers, dates
+   - **Punctuation**: Comma vs period, missing question marks
+   - **Artifacts**: API-specific errors, duplicates
+   - **Speaker mapping**: Which `[A]`, `[B]` maps to which name
+
+### Step 2: Propose Updates
+
+For each pattern found:
+1. Determine which tier it belongs to:
+   - Tier 1: Universal (applies to all transcriptions)
+   - Tier 2: Domain (crypto/finance specific)
+   - Tier 3: Project (specific to this project only)
+2. Propose the find/replace pattern
+3. Note the context where it applies
+
+### Step 3: Update CLAUDE.md
+
+1. Add new patterns to the appropriate correction table
+2. Move patterns from "Manual Review" to automatic if they can be reliably detected
+3. Document any patterns that require human judgment
+
+### Step 4: Verify Improvements
+
+After updating:
+1. Re-run corrections on the same file
+2. Compare output to reference
+3. Report accuracy improvement
+
+### Known Training Examples
+
+Training examples are stored in `examples/` folder. Each example's learnings should be documented in that example's folder or the relevant project's context.md.
+
+---
+
+## Manual Review Checklist
+
+These items require human judgment and should be flagged for review:
+
+- [ ] Questions should end with `?` (context-dependent)
+- [ ] Ellipsis placement for trailing thoughts
+- [ ] Ambiguous pronoun references (`its` vs `his`)
+- [ ] Context-specific number formatting (percentages, ratios)
+- [ ] Technical terms not in correction tables
+
+**Note:** Money formatting, number ranges, and year expansion have been moved to automatic formatting rules above.
 
 ---
 
