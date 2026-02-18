@@ -1,0 +1,64 @@
+1
+00:00:00,000 --> 00:00:00,905
+[A] You can do spot DEXes,
+
+2
+00:00:00,905 --> 00:00:03,454
+but they're constrained to the number of assets they can list.
+
+3
+00:00:03,454 --> 00:00:05,468
+If you're in DeFi and you're trading on Uniswap,
+
+4
+00:00:05,468 --> 00:00:07,811
+you can only trade assets that are tokenized on Ethereum.
+
+5
+00:00:07,811 --> 00:00:09,496
+So you can trade wBTC, you can trade ETH,
+
+6
+00:00:09,496 --> 00:00:11,346
+obviously wrapped SOL, there's some of that.
+
+7
+00:00:11,346 --> 00:00:12,867
+The further down you get on the list,
+
+8
+00:00:12,867 --> 00:00:14,306
+once it's no longer Ethereum-based,
+
+9
+00:00:14,306 --> 00:00:15,251
+you're kind of screwed.
+
+10
+00:00:15,251 --> 00:00:17,018
+It's so annoying to have to wrap and unwrap
+
+11
+00:00:17,018 --> 00:00:18,375
+and figure out exactly, you know,
+
+12
+00:00:18,375 --> 00:00:19,814
+what you own and how to get it out.
+
+13
+00:00:19,814 --> 00:00:22,363
+What really people want is the centralized exchange experience,
+
+14
+00:00:22,363 --> 00:00:24,459
+which is just, I'm actually trading the underlying.
+
+15
+00:00:24,459 --> 00:00:25,898
+That's, I think, part of the reason
+
+16
+00:00:25,898 --> 00:00:27,950
+why Near Intents has taken off, is it's so simple.
+

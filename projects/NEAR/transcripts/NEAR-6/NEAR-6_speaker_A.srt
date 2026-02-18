@@ -1,0 +1,83 @@
+1
+00:00:00,000 --> 00:00:01,900
+They need an easy API to access everything.
+
+2
+00:00:02,050 --> 00:00:05,000
+Imagine this agent negotiating contracts over email.
+
+3
+00:00:05,150 --> 00:00:06,550
+Probably not the most effective way.
+
+4
+00:00:06,700 --> 00:00:08,022
+So actually last week as well,
+
+5
+00:00:08,022 --> 00:00:09,600
+we launched the agentic marketplace.
+
+6
+00:00:09,650 --> 00:00:11,450
+Really building on the idea of Intents.
+
+7
+00:00:11,600 --> 00:00:13,850
+The Intent is really the outcome you want to achieve.
+
+8
+00:00:13,900 --> 00:00:14,550
+You can say like,
+
+9
+00:00:14,600 --> 00:00:16,000
+hey, I want this website to be built.
+
+10
+00:00:16,100 --> 00:00:17,600
+I want this building to be constructed.
+
+11
+00:00:17,700 --> 00:00:19,759
+You can send it to this Intent engine
+
+12
+00:00:19,759 --> 00:00:20,898
+or the matching book
+
+13
+00:00:20,898 --> 00:00:22,741
+and then other agents can come in
+
+14
+00:00:22,741 --> 00:00:23,500
+and say, cool.
+
+15
+00:00:23,550 --> 00:00:25,058
+I'll actually do it for this much.
+
+16
+00:00:25,058 --> 00:00:26,050
+It will take this long.
+
+17
+00:00:26,250 --> 00:00:27,000
+Here's the requirements.
+
+18
+00:00:27,156 --> 00:00:28,844
+Agreement carries the conditions
+
+19
+00:00:28,844 --> 00:00:31,278
+and so you can actually have this agreement
+
+20
+00:00:31,278 --> 00:00:33,712
+have the funds escrowed, do the work,
+
+21
+00:00:33,712 --> 00:00:34,706
+and then resolve it.

@@ -1,0 +1,401 @@
+{
+  "company": {
+    "name": "NEAR Intents",
+    "url": "https://www.near.org/intents",
+    "app_url": "https://app.near-intents.org/",
+    "docs_url": "https://docs.near-intents.org/near-intents/",
+    "tagline": "The AI-Native Transaction Layer",
+    "one_liner": "The universal trading protocol for onchain markets and tokenized assets.",
+    "description": "NEAR Intents is the universal trading protocol powering one-click cross-chain swaps and unified liquidity for onchain markets and tokenized assets. Using a novel intent-based transaction infrastructure that empowers users to express outcomes instead of managing routes, bridges, and liquidity sources, NEAR Intents unlocks frictionless cross-chain swaps for DeFi users, autonomous trading for AI agents, and broad distribution for blockchains, dApps, and asset issuers.",
+    "boilerplate": "NEAR Intents is the universal trading protocol powering one-click cross-chain swaps and unified liquidity for onchain markets and tokenized assets. Using a novel intent-based transaction infrastructure that empowers users to express outcomes instead of managing routes, bridges, and liquidity sources, NEAR Intents unlocks frictionless cross-chain swaps for DeFi users, autonomous trading for AI agents, and broad distribution for blockchains, dApps, and asset issuers. NEAR Intents has powered billions of dollars in volume across leading chains and assets and is now natively integrated into major DeFi protocols, wallet providers, traditional financial systems, and AI platforms, bringing instant and verifiable execution to global markets.",
+    "industry": "Blockchain Infrastructure / DeFi",
+    "industry_category": "Web3 Infrastructure",
+    "parent_brand": "NEAR Protocol",
+    "target_audience": [
+      "DeFi users seeking cross-chain swaps",
+      "AI agents requiring autonomous trading capabilities",
+      "Protocol developers building distribution channels",
+      "Market makers providing liquidity",
+      "Wallet providers integrating swap functionality",
+      "Traditional financial services entering Web3"
+    ],
+    "brand_personality": [
+      "technical",
+      "innovative",
+      "accessible",
+      "reliable",
+      "forward-thinking"
+    ],
+    "key_messages": [
+      "Express outcomes, not routes",
+      "One-click cross-chain swaps",
+      "Unified liquidity for onchain markets",
+      "AI-native transaction infrastructure",
+      "Instant and verifiable execution"
+    ],
+    "value_propositions": [
+      "Outcome-Driven: Users define what they want, not how to get it",
+      "Cross Chain by Default: Native multi-chain support without bridges",
+      "Secure and Permissionless: Trustless execution with competitive solving"
+    ],
+    "supported_chains": [
+      "Bitcoin",
+      "Ethereum",
+      "Solana",
+      "NEAR",
+      "Dogecoin",
+      "XRP",
+      "Zcash"
+    ],
+    "social_links": {
+      "telegram": "https://t.me/near_intents",
+      "twitter": "https://x.com/nearprotocol",
+      "github": "https://github.com/near",
+      "discord": "http://near.chat/"
+    }
+  },
+
+  "colors": {
+    "primary": {
+      "black": {
+        "hex": "#000000",
+        "name": "Black",
+        "pms": "Black C",
+        "cmyk": "0-0-0-100",
+        "rgb": "0-0-0",
+        "usage": "Primary backgrounds, high contrast text, dominant brand element",
+        "source": "brand_asset_confirmed"
+      },
+      "off_white": {
+        "hex": "#EEEEEB",
+        "name": "Off White",
+        "pms": "179 C",
+        "cmyk": "6-0-1-7",
+        "rgb": "238-238-235",
+        "usage": "Light backgrounds, text on dark, clean interface areas",
+        "source": "brand_asset_confirmed"
+      },
+      "orange": {
+        "hex": "#FB4D01",
+        "name": "Orange",
+        "pms": "021 C",
+        "cmyk": "0-85-100-0",
+        "rgb": "251-77-1",
+        "usage": "Primary accent, CTAs, emphasis, energy moments",
+        "source": "brand_asset_confirmed"
+      }
+    },
+    "secondary": {
+      "dark_grey": {
+        "hex": "#272727",
+        "name": "Dark Grey",
+        "pms": "426 C",
+        "cmyk": "0-0-0-85",
+        "rgb": "39-39-39",
+        "usage": "Secondary backgrounds, supporting dark elements",
+        "source": "brand_asset_confirmed"
+      },
+      "grey": {
+        "hex": "#A7A7A7",
+        "name": "Grey",
+        "pms": "173-3C",
+        "cmyk": "0-0-0-35",
+        "rgb": "167-167-167",
+        "usage": "Interface elements, borders, muted content",
+        "source": "brand_asset_confirmed"
+      },
+      "yellow": {
+        "hex": "#FDEB8F",
+        "name": "Yellow",
+        "pms": "1205 C",
+        "cmyk": "2-4-54-0",
+        "rgb": "253-235-143",
+        "usage": "Accent highlights, gradient endpoint, warm emphasis",
+        "source": "brand_asset_confirmed"
+      }
+    },
+    "background": {
+      "dark": "#000000",
+      "light": "#EEEEEB",
+      "mid": "#272727",
+      "preferred": "dark"
+    },
+    "text": {
+      "primary_on_dark": "#EEEEEB",
+      "primary_on_light": "#000000",
+      "secondary_on_dark": "#A7A7A7",
+      "secondary_on_light": "#272727",
+      "on_orange": "#FFFFFF",
+      "on_grey": "#FFFFFF"
+    },
+    "gradients": [
+      {
+        "name": "Primary Gradient",
+        "type": "linear",
+        "direction": "to bottom right",
+        "stops": [
+          { "color": "#FB4D01", "position": "0%" },
+          { "color": "#FDEB8F", "position": "100%" }
+        ],
+        "usage": "Hero accents, emphasis moments, call-to-action highlights",
+        "css": "linear-gradient(135deg, #FB4D01 0%, #FDEB8F 100%)"
+      }
+    ],
+    "type_color_pairings": {
+      "recommended": [
+        { "text": "#FDEB8F", "background": "#A7A7A7", "usage": "Yellow on Grey" },
+        { "text": "#FB4D01", "background": "#EEEEEB", "usage": "Orange on Off White" },
+        { "text": "#FB4D01", "background": "#272727", "usage": "Orange on Dark Grey" },
+        { "text": "#EEEEEB", "background": "#000000", "usage": "Off White on Black" },
+        { "text": "#FFFFFF", "background": "#A7A7A7", "usage": "White on Grey" },
+        { "text": "#000000", "background": "#EEEEEB", "usage": "Black on Off White" },
+        { "text": "#FFFFFF", "background": "#FB4D01", "usage": "White on Orange" }
+      ]
+    },
+    "data_colors": {
+      "positive": "#4CAF50",
+      "negative": "#F44336",
+      "highlight": "#FB4D01",
+      "neutral": "#A7A7A7"
+    },
+    "palette_mood": "Bold and technical. The black-orange contrast creates energy and urgency appropriate for financial technology. The warm orange-yellow gradient adds dynamism while maintaining a professional, trustworthy foundation. The monochromatic grey scale provides flexibility for complex UI without visual noise."
+  },
+
+  "typography": {
+    "heading": {
+      "family": "FK Grotesk",
+      "fallback": "system-ui, -apple-system, sans-serif",
+      "weights": [500, 600, 700],
+      "letter_spacing": "tight (-0.02em)",
+      "text_transform": "none",
+      "sizing_scale": {
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "h4": "clamp(1.25rem, 2vw, 1.5rem)"
+      }
+    },
+    "body": {
+      "family": "FK Grotesk",
+      "fallback": "system-ui, -apple-system, sans-serif",
+      "weights": [400, 500],
+      "line_height": "1.6",
+      "sizing": {
+        "default": "1rem (16px)",
+        "large": "1.125rem (18px)",
+        "small": "0.875rem (14px)"
+      }
+    },
+    "data": {
+      "family": "FK Grotesk Mono or JetBrains Mono",
+      "fallback": "ui-monospace, monospace",
+      "weights": [400, 500],
+      "usage": "Transaction hashes, addresses, code snippets, technical data"
+    },
+    "style_notes": "FK Grotesk is a geometric sans-serif that balances technical precision with approachability. Its clean lines work well for both marketing headlines and dense technical documentation. The typeface supports the brand's positioning as an advanced protocol that remains accessible to users."
+  },
+
+  "visual_style": {
+    "overall_aesthetic": "Technical minimalism with energetic accents. Clean, confident presentation that communicates reliability and innovation in blockchain infrastructure.",
+    "design_principles": [
+      "Clarity through hierarchy - information architecture over decoration",
+      "Controlled expression - bold moments balanced with neutral spaces",
+      "Consistent identity - unified visual language across all touchpoints",
+      "Technical credibility - precise, intentional design choices"
+    ],
+    "imagery": {
+      "photography": "Minimal use, abstract tech visualizations when needed",
+      "illustration_style": "Geometric, abstract, data-driven visualizations",
+      "illustration_examples": [
+        "Cross-chain flow diagrams",
+        "Network node visualizations",
+        "Intent-to-execution process graphics",
+        "Gradient orbs and connection lines"
+      ],
+      "motion": "Smooth transitions, purposeful animations that demonstrate cross-chain flows"
+    },
+    "iconography": {
+      "style": "outlined with selective fills",
+      "stroke_width": "1.5-2px",
+      "corner_radius": "rounded",
+      "chain_icons": "Use official chain logos (Bitcoin, Ethereum, Solana, etc.)"
+    },
+    "shapes": {
+      "language": "geometric",
+      "border_radius": {
+        "small": "4px",
+        "medium": "8px",
+        "large": "12px",
+        "pill": "9999px"
+      },
+      "cards": "Rounded corners, subtle borders or shadows"
+    },
+    "effects": {
+      "shadows": "subtle, used sparingly for elevation",
+      "glassmorphism": true,
+      "grain_texture": true,
+      "glow_accents": true,
+      "backdrop_blur": "Used in headers and overlays"
+    },
+    "spacing": {
+      "base_unit": "8px",
+      "scale": [4, 8, 12, 16, 24, 32, 48, 64, 96, 128]
+    }
+  },
+
+  "components": {
+    "buttons": {
+      "primary": {
+        "background": "#FB4D01",
+        "text": "#FFFFFF",
+        "border_radius": "8px",
+        "padding": "12px 24px",
+        "hover": "Darken 10%, slight glow",
+        "active": "Darken 15%"
+      },
+      "secondary": {
+        "background": "transparent",
+        "text": "#EEEEEB",
+        "border": "1px solid #A7A7A7",
+        "border_radius": "8px",
+        "hover": "Background rgba(255,255,255,0.1)"
+      },
+      "ghost": {
+        "background": "transparent",
+        "text": "#EEEEEB",
+        "hover": "Underline"
+      },
+      "states": "Focus: orange ring. Disabled: 40% opacity."
+    },
+    "cards": {
+      "style": "Dark background (#272727 or #000000), subtle border, 12px radius",
+      "variants": [
+        "Feature cards with icon + title + description",
+        "Integration partner cards with logo",
+        "Chain support cards with chain icon"
+      ],
+      "hover": "Slight lift or border highlight"
+    },
+    "inputs": {
+      "background": "#272727",
+      "text": "#EEEEEB",
+      "border": "1px solid #A7A7A7",
+      "border_radius": "8px",
+      "focus_state": "Orange border (#FB4D01)",
+      "placeholder": "#A7A7A7"
+    },
+    "navigation": {
+      "style": "Sticky header with backdrop blur",
+      "background": "rgba(0,0,0,0.8) with blur",
+      "mobile": "Hamburger menu with slide-out drawer"
+    },
+    "badges": {
+      "chain_badges": "Pill shape, chain color or neutral grey",
+      "status_badges": "Small, rounded, color-coded"
+    }
+  },
+
+  "brand_voice": {
+    "tone": ["technical", "confident", "accessible", "direct"],
+    "language_style": "Clear, precise technical communication that respects user intelligence. Explains complex concepts without condescension. Uses active voice and concrete examples.",
+    "key_phrases": [
+      "Express outcomes, not routes",
+      "Intent-based execution",
+      "Cross-chain by default",
+      "Unified liquidity",
+      "AI-native transactions",
+      "One-click swaps",
+      "Instant and verifiable"
+    ],
+    "terminology": {
+      "use": [
+        "Intents (not orders or requests)",
+        "Solvers (not providers or fulfilers)",
+        "Distribution channels (not frontends)",
+        "Settlement (not confirmation)",
+        "Cross-chain (not multichain or omnichain)"
+      ],
+      "avoid": [
+        "Bridge (implies separate infrastructure)",
+        "Wrapped (NEAR Intents uses native assets)",
+        "Web3 jargon without explanation"
+      ]
+    },
+    "avoid": [
+      "Hype language and hyperbole",
+      "Unexplained acronyms",
+      "Fear-based marketing",
+      "Competitor disparagement"
+    ],
+    "energy_level": "confident-moderate",
+    "writing_guidelines": {
+      "headlines": "Clear value proposition, active voice, 3-8 words",
+      "body_copy": "Explain the what and why, use examples",
+      "ctas": "Action-oriented, specific ('Swap Now', 'Build With Intents')",
+      "technical_docs": "Precise, comprehensive, code-first"
+    }
+  },
+
+  "sources": {
+    "url": "https://www.near.org/intents",
+    "url_pages_fetched": ["intents landing page", "documentation overview"],
+    "images_provided": 3,
+    "image_types_detected": [
+      "brand_asset (color palette with hex values)",
+      "brand_asset (color hierarchy)",
+      "brand_asset (type color pairings)"
+    ],
+    "additional_inputs": ["Product messaging document", "Typography specification (FK Grotesk)"]
+  },
+
+  "field_confidence": {
+    "colors": "high",
+    "typography": "high",
+    "visual_style": "high",
+    "components": "medium-high",
+    "brand_voice": "high"
+  },
+
+  "extraction_metadata": {
+    "primary_source": "combined",
+    "confidence": "high",
+    "confidence_notes": "Official brand color palette provided with exact hex values, PMS codes, and CMYK values. Color hierarchy and approved pairings explicitly documented. Typography specified as FK Grotesk. Product messaging and boilerplate provided directly. Website content confirms brand positioning and voice.",
+    "extracted_at": "2026-02-04",
+    "version": "1.0"
+  },
+
+  "web3_signals": {
+    "is_web3_brand": true,
+    "crypto_native_indicators": [
+      "Intent-based transaction protocol",
+      "Cross-chain swaps (BTC, ETH, SOL, DOGE, XRP, ZEC)",
+      "DeFi protocol integrations",
+      "Smart contract settlement on NEAR",
+      "Chain Signatures for cross-chain signing",
+      "Market maker/solver network"
+    ],
+    "tech_stack_hints": [
+      "NEAR Protocol (settlement layer)",
+      "Chain Signatures (cross-chain signing)",
+      "Next.js (website)",
+      "Builder.io (CMS)"
+    ],
+    "positioning": "Infrastructure layer - B2B protocol for DeFi applications, wallets, and AI agents rather than direct consumer product",
+    "ecosystem": {
+      "parent": "NEAR Protocol",
+      "integrations": [
+        "THORSwap",
+        "Infinex",
+        "KyberSwap",
+        "Frax Finance",
+        "Bitte",
+        "SwapKit"
+      ]
+    },
+    "anti_patterns": [
+      "Avoid 'bridge' terminology",
+      "Avoid implying wrapped tokens",
+      "Avoid comparison to traditional DEX aggregators"
+    ]
+  }
+}
