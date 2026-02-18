@@ -109,7 +109,7 @@ After context is prepared, Claude performs the following steps:
 ### 4.1 Run Transcription
 
 ```bash
-python3 transcribe.py input/{audio_file} -o projects/{name}/transcripts/{audio_file}.srt
+python3 transcribe.py input/{audio_file} -o projects/{name}/transcripts/{episode}/{episode}.srt
 ```
 
 ### 4.2 Run Post-Processing Script
@@ -150,25 +150,121 @@ If manually processing without the script:
 3. Renumber subtitles sequentially in each file
 4. Name files using speaker names from context.md when available (e.g., `{filename}_{SpeakerName}.srt`)
 
-### 4.5 Report Completion
+### 4.5 Generate Word-by-Word SRT
+
+After the sentence-level SRT is ready, generate a word-by-word SRT using Whisper word-level timestamps:
+
+```bash
+python3 whisper_word_srt.py input/{audio_file} -o projects/{name}/transcripts/{episode}/{episode}_word_by_word.srt
+```
+
+Then apply the same corrections from the processed SRT to the word-by-word file:
+- Fix terminology (proper nouns, tickers, project names)
+- Add punctuation to words at sentence boundaries
+- Split multi-word Whisper entries if needed (e.g., `Wrapsol` → `wrapped` + `SOL`)
+
+### 4.6 Report Completion
 
 ```
 Transcription complete!
 
-Main transcript: projects/{name}/transcripts/{audio_file}.srt
+Main transcript: projects/{name}/transcripts/{episode}/{episode}.srt
+Word-by-word:   projects/{name}/transcripts/{episode}/{episode}_word_by_word.srt
 
 Speaker files:
-- projects/{name}/transcripts/{audio_file}_{Speaker1Name}.srt (Speaker A, N segments)
-- projects/{name}/transcripts/{audio_file}_{Speaker2Name}.srt (Speaker B, N segments)
+- projects/{name}/transcripts/{episode}/{episode}_{Speaker1Name}.srt (Speaker A, N segments)
+- projects/{name}/transcripts/{episode}/{episode}_{Speaker2Name}.srt (Speaker B, N segments)
 
 Post-processing applied:
 - Filler words removed
 - Duplicate words fixed
 - Segments split (target: 45-55 chars, 4-5 sec max)
+- Word-by-word SRT with corrections applied
 - [List any manual corrections made]
 ```
 
-**IMPORTANT:** Always apply post-processing corrections AND split by speaker automatically after transcription. Do not wait for user to ask.
+**IMPORTANT:** Always apply post-processing corrections AND split by speaker AND generate word-by-word SRT automatically after transcription. Do not wait for user to ask.
+
+---
+
+## Step 5: Image Gen Prompts
+
+After both SRT files (sentence-level + word-by-word) are ready, generate image prompts when the user requests it.
+
+### Inputs
+
+1. **Identity JSON** (`projects/{name}/near-intents-brand-identity.json`): Brand identity with colors, logos, fonts, visual style — default for all NEAR episodes
+2. **Sentence-level SRT** (`projects/{name}/transcripts/{episode}/{episode}.srt`): Determines prompt grouping (one prompt per segment)
+3. **Word-by-word SRT** (`projects/{name}/transcripts/{episode}/{episode}_word_by_word.srt`): Provides timing detail for visual pacing
+
+### Output
+
+Generate one image prompt per sentence segment from the main SRT. Output as a plain text file with prompts separated by `*`:
+
+```
+projects/{name}/transcripts/{episode}/{episode}_prompts.txt
+```
+
+### Prompt Generation Rules
+
+1. Read `near-intents-brand-identity.json` for brand style constraints (colors, aesthetic, mood)
+2. **Group sentence segments into scenes of 3.5–5 seconds each** (~5-6 prompts per 20 seconds of audio). Do NOT generate one prompt per sentence segment — group related segments by topic/idea into longer scenes.
+3. For each scene group:
+   - Analyze the combined topic/content being discussed
+   - Generate a visual scene prompt that represents the concept
+   - Incorporate brand identity elements (color palette, style)
+4. Target tool: **Gemini** (via Nano Banana) — format prompts accordingly
+5. Prompts are for **B-roll illustrations** — visuals that literally demonstrate what the speaker is describing. Think explainer video style: if the speaker says "wrapping and unwrapping", show an ETH token being placed into a box and taken out. Concrete visual metaphors, not abstract backgrounds. Each scene should visually teach the viewer what the concept means.
+6. **Style: technical glassmorphism** — use the brand's visual style from identity JSON (glassmorphism panels, dark-grey #272727 fills, off-white #EEEEEB borders, orange #FB4D01 to yellow #FDEB8F gradients, wireframe elements, network nodes, film grain, pure black #000000 backgrounds, soft glows). No photography, no flat vector, no photorealism.
+7. **Use actual crypto logos/symbols** — Ethereum diamond, Bitcoin B, Solana sun, etc. Real recognizable icons, rendered in the brand's style.
+8. **Mix of literal and thematic** — some scenes literally illustrate the concept (wrapping = token in a box), others can be mood/vibe scenes with relevant crypto visuals. Use judgment per scene.
+9. **No text on images** — no labels, titles, UI text, or written words. State "no text, no labels, no words" in each prompt.
+10. **Prompt length varies** — some scenes need more detail, some less. Match length to complexity.
+
+### Approval Step (MANDATORY)
+
+Before generating the final prompts file, present a brief to the user for approval:
+
+1. **Scene count**: Total number of prompts (~5-6 per 20 seconds of audio)
+2. **Scene breakdown**: For each scene group, show:
+   - Timestamp range (3.5–5 sec)
+   - Which SRT segments are covered
+   - The combined spoken text
+   - A short scene concept (1 line describing the visual idea)
+3. **Brand elements**: Confirm which identity elements will be used (palette, style, mood)
+4. **Wait for approval**: User may request changes to individual scene concepts before generation
+
+Only generate the final `_prompts.txt` file after user confirms.
+
+### Step 5b: Video Gen Prompts
+
+After image prompts are generated, create corresponding video motion prompts.
+
+**Inputs:**
+1. The image prompts file (`_prompts.txt`) — these are the **starting frames**
+2. The sentence-level SRT for scene durations
+
+**Output:**
+```
+projects/{name}/transcripts/{episode}/{episode}_video_prompts.txt
+```
+
+**Rules:**
+1. One video prompt per scene, same order as image prompts, separated by `*`
+2. Target tool: **Kling** — format prompts as motion descriptions from the starting frame
+3. The image prompt is the first frame — the video prompt describes **what moves and how** from that starting state
+4. Match clip duration to scene duration from SRT groupings (~3.5–5 sec)
+5. Describe specific motion: rotation, drift, glow pulsing, zoom, parallax, particle flow, etc.
+6. Keep the brand aesthetic in motion — smooth, technical, purposeful animations
+7. No text, no labels appearing during motion
+
+### Output Format (both image and video)
+
+Prompts are separated by `*` so they can be easily split. No trailing `*` after the last prompt.
+
+```
+A cinematic scene of digital tokens flowing through a neon-lit exchange interface...*A DeFi trading dashboard with Ethereum-branded assets glowing in purple and blue...*A visual metaphor for blockchain interoperability showing wrapped tokens...
+```
 
 ---
 
@@ -377,9 +473,15 @@ Do NOT change these informal speech patterns:
 ```
 projects/
 └── {project_name}/
-    ├── context.md     # Terminology, speakers, topic info
-    ├── sources.md     # Research links and notes
-    └── transcripts/   # Output SRT files
+    ├── context.md        # Terminology, speakers, topic info
+    ├── sources.md        # Research links and notes
+    ├── near-intents-brand-identity.json  # Brand identity (default for NEAR projects)
+    └── transcripts/
+        └── {episode}/          # e.g., NEAR-5, NEAR-6
+            ├── {episode}.srt               # Main post-processed transcript (sentence segments)
+            ├── {episode}_speaker_A.srt     # Speaker-split file (renamed to speaker name)
+            ├── {episode}_word_by_word.srt  # Word-level timestamps (one word per segment)
+            └── {episode}_prompts.txt        # Image gen prompts (separated by *)
 ```
 
 ---
