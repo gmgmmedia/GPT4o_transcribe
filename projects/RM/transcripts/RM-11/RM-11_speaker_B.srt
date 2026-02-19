@@ -1,0 +1,67 @@
+1
+00:00:04,200 --> 00:00:05,535
+The only blockchain use case
+
+2
+00:00:05,535 --> 00:00:08,400
+that really found real-world use is financial applications.
+
+3
+00:00:08,500 --> 00:00:09,800
+For retail users.
+
+4
+00:00:09,900 --> 00:00:11,277
+This is another option for them
+
+5
+00:00:11,277 --> 00:00:12,700
+to get into the capital markets.
+
+6
+00:00:12,800 --> 00:00:14,500
+Traditional way, it was real estate.
+
+7
+00:00:14,700 --> 00:00:15,350
+Stock trading.
+
+8
+00:00:15,550 --> 00:00:16,400
+Futures trading, options.
+
+9
+00:00:16,500 --> 00:00:16,700
+Right?
+
+10
+00:00:16,750 --> 00:00:17,521
+All these good stuff.
+
+11
+00:00:17,521 --> 00:00:18,100
+They are great.
+
+12
+00:00:18,150 --> 00:00:20,914
+But the legacy market that we are using today
+
+13
+00:00:20,914 --> 00:00:23,495
+is actually not fair to the retail audience
+
+14
+00:00:23,495 --> 00:00:26,137
+because the edge that you have on the trade
+
+15
+00:00:26,137 --> 00:00:27,734
+comes not from information.
+
+16
+00:00:27,734 --> 00:00:31,356
+It actually comes from how close you are to the data center.
+
+17
+00:00:31,506 --> 00:00:33,756
+So that's an unfair playing field for people.

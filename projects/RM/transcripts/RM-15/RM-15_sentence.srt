@@ -1,0 +1,116 @@
+1
+00:00:00,000 --> 00:00:00,667
+And now we're moving
+
+2
+00:00:00,667 --> 00:00:02,233
+into this agentic future,
+
+3
+00:00:02,233 --> 00:00:03,400
+this new frontier.
+
+4
+00:00:03,400 --> 00:00:03,567
+Talk to me
+
+5
+00:00:03,567 --> 00:00:04,467
+a little bit about how
+
+6
+00:00:04,467 --> 00:00:05,500
+Algorand is positioning for
+
+7
+00:00:05,500 --> 00:00:06,167
+that and how you guys
+
+8
+00:00:06,167 --> 00:00:06,867
+are building for that
+
+9
+00:00:06,867 --> 00:00:08,133
+agentic builder future.
+
+10
+00:00:08,133 --> 00:00:09,633
+There's two answers to that.
+
+11
+00:00:09,633 --> 00:00:10,833
+One, settling transactions on
+
+12
+00:00:10,833 --> 00:00:11,833
+Algorand through x402
+
+13
+00:00:11,833 --> 00:00:13,267
+is an incredible protocol.
+
+14
+00:00:13,267 --> 00:00:13,967
+This is going to power
+
+15
+00:00:13,967 --> 00:00:15,667
+the future of agentic commerce.
+
+16
+00:00:15,667 --> 00:00:16,767
+Whatever humans want their
+
+17
+00:00:16,767 --> 00:00:17,333
+agents to buy,
+
+18
+00:00:17,333 --> 00:00:18,233
+or agents want their
+
+19
+00:00:18,233 --> 00:00:18,933
+agents to buy,
+
+20
+00:00:18,933 --> 00:00:20,467
+works really great on Algorand.
+
+21
+00:00:20,467 --> 00:00:21,133
+The other thing is
+
+22
+00:00:21,133 --> 00:00:22,433
+we built a compiler
+
+23
+00:00:22,433 --> 00:00:23,033
+so you can write
+
+24
+00:00:23,033 --> 00:00:24,567
+smart contracts in easy languages.
+
+25
+00:00:24,567 --> 00:00:25,967
+That also unlocks
+
+26
+00:00:25,967 --> 00:00:26,867
+the ability for AI
+
+27
+00:00:26,867 --> 00:00:27,967
+to build stuff on Algorand
+
+28
+00:00:27,967 --> 00:00:29,233
+because it uses a
+
+29
+00:00:29,233 --> 00:00:31,467
+language that LLMs know best.
+

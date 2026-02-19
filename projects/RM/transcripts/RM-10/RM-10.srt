@@ -1,0 +1,67 @@
+1
+00:00:00,000 --> 00:00:00,700
+[A] What is Aptos?
+
+2
+00:00:00,750 --> 00:00:01,300
+[A] What is Move?
+
+3
+00:00:01,400 --> 00:00:01,950
+[A] What are you building?
+
+4
+00:00:01,950 --> 00:00:03,000
+[B] My name is Chris Kim.
+
+5
+00:00:03,100 --> 00:00:05,800
+[B] I'm the developer relations engineer at Aptos Labs.
+
+6
+00:00:05,950 --> 00:00:08,280
+[B] Recently been creating a lot of AI tooling for developers
+
+7
+00:00:08,280 --> 00:00:09,950
+[B] because no one's manually coding anymore.
+
+8
+00:00:10,150 --> 00:00:11,436
+[B] Now we're building agent skills
+
+9
+00:00:11,436 --> 00:00:13,150
+[B] and all these cool AI tooling for people.
+
+10
+00:00:13,150 --> 00:00:15,050
+[A] What are you most passionate and excited about?
+
+11
+00:00:15,050 --> 00:00:17,552
+[B] Two main things that we're focusing on for 2026
+
+12
+00:00:17,552 --> 00:00:19,150
+[B] is Decimate Decimal and Shelby.
+
+13
+00:00:19,350 --> 00:00:21,114
+[B] Decentralized hot storage solution.
+
+14
+00:00:21,114 --> 00:00:23,967
+[B] So it's really like a good example for the world to see
+
+15
+00:00:23,967 --> 00:00:25,991
+[B] that, hey, if you really fully leverage
+
+16
+00:00:25,991 --> 00:00:27,650
+[B] the technology that Aptos offers.
+
+17
+00:00:27,850 --> 00:00:29,350
+[B] This is the type of product that you can build.

@@ -1,0 +1,111 @@
+1
+00:00:00,000 --> 00:00:00,933
+What is Aptos?
+
+2
+00:00:00,933 --> 00:00:01,533
+What is Move?
+
+3
+00:00:01,533 --> 00:00:02,433
+What are you building?
+
+4
+00:00:02,433 --> 00:00:03,400
+My name is Chris Kim.
+
+5
+00:00:03,400 --> 00:00:04,767
+I'm a developer relations
+
+6
+00:00:04,767 --> 00:00:06,233
+engineer at Aptos Labs.
+
+7
+00:00:06,233 --> 00:00:06,967
+Recently been creating
+
+8
+00:00:06,967 --> 00:00:07,833
+a lot of AI tooling
+
+9
+00:00:07,833 --> 00:00:08,767
+for developers because
+
+10
+00:00:08,767 --> 00:00:10,333
+no one's manually coding anymore.
+
+11
+00:00:10,333 --> 00:00:11,667
+Now we're building agent skills
+
+12
+00:00:11,667 --> 00:00:12,333
+and all these cool
+
+13
+00:00:12,333 --> 00:00:13,433
+AI tooling for people.
+
+14
+00:00:13,433 --> 00:00:14,067
+What are you most
+
+15
+00:00:14,067 --> 00:00:15,333
+passionate and excited about?
+
+16
+00:00:15,333 --> 00:00:16,167
+Two main things that
+
+17
+00:00:16,167 --> 00:00:17,433
+we're focusing on for 2026
+
+18
+00:00:17,433 --> 00:00:18,333
+is Decimate Decibel
+
+19
+00:00:18,333 --> 00:00:19,600
+and Shelby.
+
+20
+00:00:19,600 --> 00:00:21,100
+Decentralized hot storage solution.
+
+21
+00:00:21,100 --> 00:00:22,067
+So it's really like
+
+22
+00:00:22,067 --> 00:00:23,367
+a good example for
+
+23
+00:00:23,367 --> 00:00:24,900
+the world to see that,
+
+24
+00:00:24,900 --> 00:00:25,533
+hey if you really
+
+25
+00:00:25,533 --> 00:00:27,000
+fully leverage the technology
+
+26
+00:00:27,000 --> 00:00:28,100
+that Aptos offers.
+
+27
+00:00:28,100 --> 00:00:28,800
+This is the type of
+
+28
+00:00:28,800 --> 00:00:29,600
+product that you can build.

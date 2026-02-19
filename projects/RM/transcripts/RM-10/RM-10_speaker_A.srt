@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:00,700
+What is Aptos?
+
+2
+00:00:00,750 --> 00:00:01,300
+What is Move?
+
+3
+00:00:01,400 --> 00:00:01,950
+What are you building?
+
+4
+00:00:13,150 --> 00:00:15,050
+What are you most passionate and excited about?

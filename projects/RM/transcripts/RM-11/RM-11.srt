@@ -1,0 +1,79 @@
+1
+00:00:00,000 --> 00:00:01,422
+[A] So for the folks that are a little bit more
+
+2
+00:00:01,422 --> 00:00:02,150
+[A] green to the industry.
+
+3
+00:00:02,200 --> 00:00:04,200
+[A] How does that benefit them, all of what Aptos is building?
+
+4
+00:00:04,200 --> 00:00:05,535
+[B] The only blockchain use case
+
+5
+00:00:05,535 --> 00:00:08,400
+[B] that really found real-world use is financial applications.
+
+6
+00:00:08,500 --> 00:00:09,800
+[B] For retail users.
+
+7
+00:00:09,900 --> 00:00:11,277
+[B] This is another option for them
+
+8
+00:00:11,277 --> 00:00:12,700
+[B] to get into the capital markets.
+
+9
+00:00:12,800 --> 00:00:14,500
+[B] Traditional way, it was real estate.
+
+10
+00:00:14,700 --> 00:00:15,350
+[B] Stock trading.
+
+11
+00:00:15,550 --> 00:00:16,400
+[B] Futures trading, options.
+
+12
+00:00:16,500 --> 00:00:16,700
+[B] Right?
+
+13
+00:00:16,750 --> 00:00:17,521
+[B] All these good stuff.
+
+14
+00:00:17,521 --> 00:00:18,100
+[B] They are great.
+
+15
+00:00:18,150 --> 00:00:20,914
+[B] But the legacy market that we are using today
+
+16
+00:00:20,914 --> 00:00:23,495
+[B] is actually not fair to the retail audience
+
+17
+00:00:23,495 --> 00:00:26,137
+[B] because the edge that you have on the trade
+
+18
+00:00:26,137 --> 00:00:27,734
+[B] comes not from information.
+
+19
+00:00:27,734 --> 00:00:31,356
+[B] It actually comes from how close you are to the data center.
+
+20
+00:00:31,506 --> 00:00:33,756
+[B] So that's an unfair playing field for people.

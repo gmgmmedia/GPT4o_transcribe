@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:01,804
+[A] If you could say anything to anyone about Monad,
+
+2
+00:00:01,804 --> 00:00:03,350
+[A] what would you tell the world about Monad?
+
+3
+00:00:03,350 --> 00:00:04,990
+[B] My hot take is that if you were to
+
+4
+00:00:04,990 --> 00:00:06,967
+[B] rebuild Ethereum from the ground up today
+
+5
+00:00:06,967 --> 00:00:09,620
+[B] with like none of the baggage but all of the learnings,
+
+6
+00:00:09,620 --> 00:00:11,550
+[B] that is essentially what Monad is today.
+
+7
+00:00:11,600 --> 00:00:13,850
+[B] People may get mad at me for that take, but...
+
+8
+00:00:13,850 --> 00:00:14,750
+[A] They heard it here first.
+
+9
+00:00:14,750 --> 00:00:16,300
+[B] That's my take, that's my take.
+
+10
+00:00:16,300 --> 00:00:16,950
+[A] That's a hot take.

@@ -1,0 +1,123 @@
+1
+00:00:00,000 --> 00:00:00,667
+So for the folks
+
+2
+00:00:00,667 --> 00:00:01,400
+that are a little bit
+
+3
+00:00:01,400 --> 00:00:02,333
+more green to the industry.
+
+4
+00:00:02,333 --> 00:00:03,333
+How does that benefit them,
+
+5
+00:00:03,333 --> 00:00:04,567
+all of what Aptos is building?
+
+6
+00:00:04,567 --> 00:00:05,567
+The only blockchain use case
+
+7
+00:00:05,567 --> 00:00:07,433
+that really found real world use
+
+8
+00:00:07,433 --> 00:00:08,867
+is financial applications.
+
+9
+00:00:08,867 --> 00:00:10,167
+For retail users,
+
+10
+00:00:10,167 --> 00:00:11,167
+this is another option
+
+11
+00:00:11,167 --> 00:00:12,067
+for them to get into
+
+12
+00:00:12,067 --> 00:00:13,100
+the capital markets.
+
+13
+00:00:13,100 --> 00:00:13,900
+Traditional way,
+
+14
+00:00:13,900 --> 00:00:14,867
+it was real estate,
+
+15
+00:00:14,867 --> 00:00:15,733
+stock trading,
+
+16
+00:00:15,733 --> 00:00:16,667
+futures trading, options.
+
+17
+00:00:16,667 --> 00:00:16,933
+Right?
+
+18
+00:00:16,933 --> 00:00:17,600
+All these good stuff.
+
+19
+00:00:17,600 --> 00:00:18,467
+They are great.
+
+20
+00:00:18,467 --> 00:00:19,467
+But the legacy market
+
+21
+00:00:19,467 --> 00:00:20,833
+that we are using today
+
+22
+00:00:20,833 --> 00:00:22,267
+is actually not fair
+
+23
+00:00:22,267 --> 00:00:23,967
+to the retail audience
+
+24
+00:00:23,967 --> 00:00:25,167
+because the edge
+
+25
+00:00:25,167 --> 00:00:26,600
+that you have on the trade
+
+26
+00:00:26,600 --> 00:00:28,333
+comes not from information.
+
+27
+00:00:28,333 --> 00:00:29,667
+It actually comes from
+
+28
+00:00:29,667 --> 00:00:30,900
+how close you are to
+
+29
+00:00:30,900 --> 00:00:31,767
+the data center.
+
+30
+00:00:31,767 --> 00:00:32,767
+So that's an unfair
+
+31
+00:00:32,767 --> 00:00:33,867
+playing field for people.

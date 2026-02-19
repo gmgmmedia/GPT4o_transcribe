@@ -1,0 +1,71 @@
+1
+00:00:00,000 --> 00:00:01,328
+[A] For the ecosystem builders out there,
+
+2
+00:00:01,328 --> 00:00:03,250
+[A] I think the way that you guys do things is quite novel.
+
+3
+00:00:03,350 --> 00:00:05,150
+[A] Can you speak through your process a little bit?
+
+4
+00:00:05,200 --> 00:00:05,924
+[A] Like how you build it,
+
+5
+00:00:05,924 --> 00:00:07,700
+[A] how you're architecting this ecosystem moving forward?
+
+6
+00:00:07,700 --> 00:00:10,500
+[B] We take definitely a credibly neutral approach
+
+7
+00:00:10,500 --> 00:00:13,300
+[B] that a lot of other ecosystems disagree with.
+
+8
+00:00:13,400 --> 00:00:14,778
+[B] Credibly neutral doesn't mean
+
+9
+00:00:14,778 --> 00:00:17,580
+[B] that we give every single team the same amount of resources
+
+10
+00:00:17,580 --> 00:00:19,100
+[B] because that doesn't make sense.
+
+11
+00:00:19,250 --> 00:00:20,976
+[B] But what we do is we double down
+
+12
+00:00:20,976 --> 00:00:22,869
+[B] on the teams that are able to show
+
+13
+00:00:22,869 --> 00:00:24,985
+[B] user retention and traction themselves
+
+14
+00:00:24,985 --> 00:00:26,600
+[B] because that's actually where
+
+15
+00:00:26,740 --> 00:00:29,242
+[B] the resources and the attention will go the furthest.
+
+16
+00:00:29,242 --> 00:00:31,648
+[B] But actually making it like a level playing ground
+
+17
+00:00:31,648 --> 00:00:33,283
+[B] for everyone to get to that stage,
+
+18
+00:00:33,283 --> 00:00:35,640
+[B] I would say that's kind of like the core thesis.

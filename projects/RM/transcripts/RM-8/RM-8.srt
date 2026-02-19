@@ -1,0 +1,63 @@
+1
+00:00:00,000 --> 00:00:00,650
+[A] What's next for Stellar?
+
+2
+00:00:00,650 --> 00:00:03,700
+[B] Primary focus right now is in the privacy sector.
+
+3
+00:00:03,850 --> 00:00:05,300
+[B] Whenever you send someone money on the blockchain.
+
+4
+00:00:05,550 --> 00:00:05,850
+[B] It's public.
+
+5
+00:00:05,950 --> 00:00:07,200
+[B] Everyone knows how much money you have.
+
+6
+00:00:07,250 --> 00:00:08,700
+[B] For a lot of use cases, that just won't work.
+
+7
+00:00:08,750 --> 00:00:09,850
+[B] You want to do payroll, for instance.
+
+8
+00:00:10,000 --> 00:00:11,132
+[B] You can't have other competitors
+
+9
+00:00:11,132 --> 00:00:12,850
+[B] knowing how much you're paying your employees.
+
+10
+00:00:13,050 --> 00:00:13,350
+[B] Again.
+
+11
+00:00:13,400 --> 00:00:15,400
+[B] Just doing the simple stuff sounds easy.
+
+12
+00:00:15,600 --> 00:00:17,857
+[B] Just sending money to someone because they work for you,
+
+13
+00:00:17,857 --> 00:00:19,550
+[B] it's actually super complex on blockchain.
+
+14
+00:00:19,800 --> 00:00:21,567
+[B] So I think just getting privacy payments
+
+15
+00:00:21,567 --> 00:00:22,850
+[B] such that you can do payroll.
+
+16
+00:00:23,000 --> 00:00:24,200
+[B] Number one priority of us this year.

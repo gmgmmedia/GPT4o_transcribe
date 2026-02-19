@@ -1,0 +1,139 @@
+1
+00:00:00,000 --> 00:00:00,733
+For the ecosystem
+
+2
+00:00:00,733 --> 00:00:01,500
+builders out there,
+
+3
+00:00:01,500 --> 00:00:02,000
+I think the way
+
+4
+00:00:02,000 --> 00:00:02,633
+that you guys do
+
+5
+00:00:02,633 --> 00:00:03,800
+things is quite novel.
+
+6
+00:00:03,800 --> 00:00:04,433
+Can you speak through
+
+7
+00:00:04,433 --> 00:00:05,333
+your process a little bit?
+
+8
+00:00:05,333 --> 00:00:06,167
+Like how you build it,
+
+9
+00:00:06,167 --> 00:00:07,133
+how you're architecting this
+
+10
+00:00:07,133 --> 00:00:08,167
+ecosystem moving forward?
+
+11
+00:00:08,167 --> 00:00:09,233
+We take definitely
+
+12
+00:00:09,233 --> 00:00:11,067
+a credibly neutral approach
+
+13
+00:00:11,067 --> 00:00:11,900
+that a lot of
+
+14
+00:00:11,900 --> 00:00:13,867
+other ecosystems disagree with.
+
+15
+00:00:13,867 --> 00:00:14,933
+Credibly neutral doesn't mean
+
+16
+00:00:14,933 --> 00:00:16,567
+that we give every
+
+17
+00:00:16,567 --> 00:00:17,500
+single team the same
+
+18
+00:00:17,500 --> 00:00:18,133
+amount of resources
+
+19
+00:00:18,133 --> 00:00:19,567
+because that doesn't make sense.
+
+20
+00:00:19,567 --> 00:00:20,667
+But what we do
+
+21
+00:00:20,667 --> 00:00:21,867
+is we double down
+
+22
+00:00:21,867 --> 00:00:22,633
+on the teams that
+
+23
+00:00:22,633 --> 00:00:23,733
+are able to show
+
+24
+00:00:23,733 --> 00:00:25,233
+user retention and traction
+
+25
+00:00:25,233 --> 00:00:26,567
+themselves because that's actually
+
+26
+00:00:26,567 --> 00:00:27,700
+where the resources
+
+27
+00:00:27,700 --> 00:00:28,633
+and the attention
+
+28
+00:00:28,633 --> 00:00:29,567
+will go the furthest.
+
+29
+00:00:29,567 --> 00:00:30,767
+But actually making it
+
+30
+00:00:30,767 --> 00:00:31,767
+like a level playing
+
+31
+00:00:31,767 --> 00:00:33,000
+ground for everyone to
+
+32
+00:00:33,000 --> 00:00:34,067
+get to that stage,
+
+33
+00:00:34,067 --> 00:00:34,433
+I would say
+
+34
+00:00:34,433 --> 00:00:35,067
+that's kind of like
+
+35
+00:00:35,067 --> 00:00:35,900
+the core thesis.

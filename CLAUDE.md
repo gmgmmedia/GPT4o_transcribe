@@ -150,18 +150,56 @@ If manually processing without the script:
 3. Renumber subtitles sequentially in each file
 4. Name files using speaker names from context.md when available (e.g., `{filename}_{SpeakerName}.srt`)
 
-### 4.5 Generate Word-by-Word SRT
+### 4.5 Generate Subtitle SRT (Word-by-Word OR Sentence-Grouped)
 
-After the sentence-level SRT is ready, generate a word-by-word SRT using Whisper word-level timestamps:
+The user will specify which subtitle format they want. There are two workflows:
+
+**Sentence-only workflow**: When user asks for "sentence transcription", skip steps 4.1-4.4 entirely. Only run Whisper (step 4.5), apply corrections from context, group into `_sentence.srt`. No diarize transcription, no main SRT, no speaker splits needed.
+
+**Full workflow**: When user asks for full transcription, run steps 4.1-4.4 first (diarize → corrections → speaker splits), then generate the subtitle SRT.
+
+The user will specify which format they want:
+
+- **Word-by-word** (`_word_by_word.srt`): One word per subtitle segment
+- **Sentence-grouped** (`_sentence.srt`): 3-5 words per subtitle segment, grouped at logical phrase boundaries
+
+#### Step 1: Run Whisper to get raw word-level timestamps
 
 ```bash
-python3 whisper_word_srt.py input/{audio_file} -o projects/{name}/transcripts/{episode}/{episode}_word_by_word.srt
+python3 whisper_word_srt.py input/{audio_file} -o projects/{name}/transcripts/{episode}/{episode}_word_by_word_raw.srt
 ```
 
-Then apply the same corrections from the processed SRT to the word-by-word file:
+#### Step 2a: Word-by-Word Format (`_word_by_word.srt`)
+
+Use the raw Whisper output directly (one word per segment). Apply corrections:
 - Fix terminology (proper nouns, tickers, project names)
 - Add punctuation to words at sentence boundaries
 - Split multi-word Whisper entries if needed (e.g., `Wrapsol` → `wrapped` + `SOL`)
+
+Output: `projects/{name}/transcripts/{episode}/{episode}_word_by_word.srt`
+
+#### Step 2b: Sentence-Grouped Format (`_sentence.srt`)
+
+Group the raw Whisper words into chunks of 3-5 words at logical phrase boundaries. Steps:
+
+1. **Apply word-level corrections first** (terminology, punctuation) to the raw word list before grouping
+2. **Group words into 3-5 word chunks**, splitting at logical boundaries:
+   - Sentence boundaries (after `.` `?` `!`)
+   - Clause boundaries (after `,`)
+   - Before conjunctions ("and", "but", "so", "because")
+   - Before prepositions ("for", "with", "in", "on", "to")
+   - Before articles starting new phrases ("the", "a")
+3. **Concatenate** corrected words in each group with spaces
+4. **Timestamps**: start = first word's start time, end = last word's end time
+
+Output: `projects/{name}/transcripts/{episode}/{episode}_sentence.srt`
+
+#### Step 3: Common Post-Processing (both formats)
+
+Apply these to whichever format was generated:
+- **Close all gaps between subtitles**: Each subtitle's end time must equal the next subtitle's start time. If subtitle 1 ends at `00:00:10,000` and subtitle 2 starts at `00:00:15,000`, extend subtitle 1's end time to `00:00:15,000`. There should be zero gaps in the subtitle SRT timeline.
+- **Snap timestamps to 30fps frame boundaries**: Round all timestamps to the nearest multiple of ~33.333ms (1 frame at 30fps). This prevents 1-frame gaps in CapCut and other video editors.
+- **Capitalization after punctuation**: If a word/group ends with `.` `?` or `!`, the next word/group must start with a capital letter. If a word/group ends with `,`, the next word/group must be lowercase (unless it's a proper noun like Stellar, Bitcoin, US, etc.).
 
 ### 4.6 Report Completion
 
@@ -169,7 +207,7 @@ Then apply the same corrections from the processed SRT to the word-by-word file:
 Transcription complete!
 
 Main transcript: projects/{name}/transcripts/{episode}/{episode}.srt
-Word-by-word:   projects/{name}/transcripts/{episode}/{episode}_word_by_word.srt
+Subtitle SRT:   projects/{name}/transcripts/{episode}/{episode}_word_by_word.srt  (or _sentence.srt)
 
 Speaker files:
 - projects/{name}/transcripts/{episode}/{episode}_{Speaker1Name}.srt (Speaker A, N segments)
@@ -179,11 +217,11 @@ Post-processing applied:
 - Filler words removed
 - Duplicate words fixed
 - Segments split (target: 45-55 chars, 4-5 sec max)
-- Word-by-word SRT with corrections applied
+- Subtitle SRT generated (word-by-word or sentence-grouped) with corrections, gap-closing, 30fps snapping
 - [List any manual corrections made]
 ```
 
-**IMPORTANT:** Always apply post-processing corrections AND split by speaker AND generate word-by-word SRT automatically after transcription. Do not wait for user to ask.
+**IMPORTANT:** Always apply post-processing corrections AND split by speaker AND generate a subtitle SRT (word-by-word or sentence-grouped, as specified by user) automatically after transcription. Do not wait for user to ask.
 
 ---
 
@@ -257,6 +295,7 @@ projects/{name}/transcripts/{episode}/{episode}_video_prompts.txt
 5. Describe specific motion: rotation, drift, glow pulsing, zoom, parallax, particle flow, etc.
 6. Keep the brand aesthetic in motion — smooth, technical, purposeful animations
 7. No text, no labels appearing during motion
+8. **Start each video prompt with the duration in seconds** (e.g., `[2.2s]`) — this helps set the clip length in the video gen tool. The user will remove these before generating.
 
 ### Output Format (both image and video)
 
@@ -481,6 +520,7 @@ projects/
             ├── {episode}.srt               # Main post-processed transcript (sentence segments)
             ├── {episode}_speaker_A.srt     # Speaker-split file (renamed to speaker name)
             ├── {episode}_word_by_word.srt  # Word-level timestamps (one word per segment)
+            ├── {episode}_sentence.srt      # Grouped timestamps (3-5 words per segment)
             └── {episode}_prompts.txt        # Image gen prompts (separated by *)
 ```
 

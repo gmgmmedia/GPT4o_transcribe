@@ -1,0 +1,51 @@
+1
+00:00:11,847 --> 00:00:13,649
+The tourists are here when the market's good
+
+2
+00:00:13,649 --> 00:00:15,611
+and the builders are here when the market's bad.
+
+3
+00:00:15,611 --> 00:00:17,734
+So I mean, Stellar has been around for over a decade.
+
+4
+00:00:17,734 --> 00:00:19,616
+There's been so many boom cycles, bust cycles.
+
+5
+00:00:19,616 --> 00:00:20,737
+I believe in the technology.
+
+6
+00:00:20,737 --> 00:00:22,299
+The speculative prices can come and go.
+
+7
+00:00:22,299 --> 00:00:24,021
+I want to make it such that folks can send
+
+8
+00:00:24,021 --> 00:00:25,302
+US dollars to anyone in the world
+
+9
+00:00:25,302 --> 00:00:27,504
+for a fraction of a penny in less than a second. Right?
+
+10
+00:00:27,504 --> 00:00:29,426
+The price of Bitcoin doesn't affect that vision.
+
+11
+00:00:29,426 --> 00:00:30,547
+If you're a gambler, gamble.
+
+12
+00:00:30,547 --> 00:00:32,188
+But if you just want to build cool stuff
+
+13
+00:00:32,188 --> 00:00:33,388
+then just head down and build.

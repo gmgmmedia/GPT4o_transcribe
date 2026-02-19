@@ -1,0 +1,87 @@
+1
+00:00:02,050 --> 00:00:04,882
+Our primary use case is called real world assets
+
+2
+00:00:04,882 --> 00:00:05,750
+or stablecoins.
+
+3
+00:00:05,900 --> 00:00:06,813
+And so when you think about crypto
+
+4
+00:00:06,813 --> 00:00:07,700
+you know, you think about Bitcoin.
+
+5
+00:00:07,950 --> 00:00:08,450
+Ethereum.
+
+6
+00:00:08,700 --> 00:00:10,931
+All these coins that are like going way up in price
+
+7
+00:00:10,931 --> 00:00:11,850
+or way down in price.
+
+8
+00:00:11,900 --> 00:00:12,450
+All this volatility.
+
+9
+00:00:12,650 --> 00:00:13,600
+Almost gambling on price.
+
+10
+00:00:13,800 --> 00:00:13,950
+Right?
+
+11
+00:00:14,050 --> 00:00:15,350
+That's not what Stellar is for.
+
+12
+00:00:15,450 --> 00:00:17,100
+Stellar is for the really boring stuff.
+
+13
+00:00:17,250 --> 00:00:19,300
+We just basically want to make money as simple as email.
+
+14
+00:00:19,350 --> 00:00:20,850
+If you want to send someone an email.
+
+15
+00:00:20,950 --> 00:00:22,000
+You just type in their address.
+
+16
+00:00:22,100 --> 00:00:22,850
+Hit send, it's there.
+
+17
+00:00:22,950 --> 00:00:24,400
+We want money to work the same way.
+
+18
+00:00:24,450 --> 00:00:25,850
+Not like speculative money.
+
+19
+00:00:25,900 --> 00:00:26,750
+But like actual US.
+
+20
+00:00:26,850 --> 00:00:27,550
+Dollars, euros.
+
+21
+00:00:27,650 --> 00:00:28,150
+Real money.
+
+22
+00:00:28,200 --> 00:00:28,400
+You know?

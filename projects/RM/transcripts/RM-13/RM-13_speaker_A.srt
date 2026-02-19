@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:01,328
+For the ecosystem builders out there,
+
+2
+00:00:01,328 --> 00:00:03,250
+I think the way that you guys do things is quite novel.
+
+3
+00:00:03,350 --> 00:00:05,150
+Can you speak through your process a little bit?
+
+4
+00:00:05,200 --> 00:00:05,924
+Like how you build it,
+
+5
+00:00:05,924 --> 00:00:07,700
+how you're architecting this ecosystem moving forward?

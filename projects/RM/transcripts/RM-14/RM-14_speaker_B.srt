@@ -1,0 +1,23 @@
+1
+00:00:03,350 --> 00:00:04,990
+My hot take is that if you were to
+
+2
+00:00:04,990 --> 00:00:06,967
+rebuild Ethereum from the ground up today
+
+3
+00:00:06,967 --> 00:00:09,620
+with like none of the baggage but all of the learnings,
+
+4
+00:00:09,620 --> 00:00:11,550
+that is essentially what Monad is today.
+
+5
+00:00:11,600 --> 00:00:13,850
+People may get mad at me for that take, but...
+
+6
+00:00:14,750 --> 00:00:16,300
+That's my take, that's my take.
