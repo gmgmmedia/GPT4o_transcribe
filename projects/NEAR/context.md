@@ -34,6 +34,10 @@ Used for image gen prompt generation after transcription.
 |---------|-----------|--------|
 | NEAR-5 | `input/NEAR-5-audio.MP3` | Transcribed + word-by-word |
 | NEAR-6 | `input/NEAR-6_audio.MP3` | Transcribed + word-by-word |
+| NEAR-15 | `input/NEAR-15-audio.MP3` | Word-by-word (SPICE: Separation of consensus and execution) |
+| NEAR-16 | `input/NEAR-16-audio.MP3` | Word-by-word (Atomic Transactions) |
+| NEAR-17 | `input/NEAR-17-audio.MP3` | Word-by-word (Storage Management) |
+| NEAR-18 | `input/NEAR-18-audio.MP3` | Word-by-word (Privacy) |
 
 ## Notes
 - No prompt hints are passed to the diarize model

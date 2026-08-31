@@ -1,0 +1,442 @@
+1
+00:00:00,000 --> 00:00:02,700
+Welcome to Xentiment by Crunch.
+
+2
+00:00:02,700 --> 00:00:04,667
+This app lets you trade
+social media sentiment.
+
+3
+00:00:04,667 --> 00:00:06,267
+Here's how it works.
+
+4
+00:00:06,267 --> 00:00:08,867
+Our AI scans social media,
+
+5
+00:00:08,867 --> 00:00:11,133
+analyzes historical sentiment
+
+6
+00:00:11,133 --> 00:00:12,867
+around the topics you care about,
+
+7
+00:00:12,867 --> 00:00:14,100
+and finds correlations
+
+8
+00:00:14,100 --> 00:00:16,500
+between that sentiment
+and asset prices.
+
+9
+00:00:16,500 --> 00:00:18,667
+When a correlation exists,
+
+10
+00:00:18,667 --> 00:00:20,467
+we backtest a trading strategy
+
+11
+00:00:20,467 --> 00:00:21,667
+and show you the results.
+
+12
+00:00:21,667 --> 00:00:23,533
+Real P&L.
+
+13
+00:00:23,533 --> 00:00:25,633
+Real trades.
+
+14
+00:00:25,633 --> 00:00:27,000
+You start with a thesis.
+
+15
+00:00:27,000 --> 00:00:28,333
+Something like
+
+16
+00:00:28,333 --> 00:00:29,700
+"How bullish is Elon today?"
+
+17
+00:00:29,700 --> 00:00:31,900
+The app measures that sentiment
+
+18
+00:00:31,900 --> 00:00:32,633
+over time
+
+19
+00:00:32,633 --> 00:00:34,100
+and checks whether it's
+
+20
+00:00:34,100 --> 00:00:36,167
+historically predicted
+Bitcoin price moves.
+
+21
+00:00:36,167 --> 00:00:37,533
+If it has,
+
+22
+00:00:37,533 --> 00:00:38,700
+you can trade on it.
+
+23
+00:00:38,700 --> 00:00:40,200
+Let's try it out.
+
+24
+00:00:40,200 --> 00:00:42,167
+I'll log in with my X account,
+
+25
+00:00:42,167 --> 00:00:43,500
+authorize the app,
+
+26
+00:00:43,500 --> 00:00:44,967
+verify my account,
+
+27
+00:00:44,967 --> 00:00:46,100
+and I'm in.
+
+28
+00:00:46,100 --> 00:00:48,567
+Now I click Earn Rewards.
+
+29
+00:00:48,567 --> 00:00:50,300
+Here's the interface.
+
+30
+00:00:50,300 --> 00:00:51,667
+Right now,
+
+31
+00:00:51,667 --> 00:00:53,467
+the tradable asset is Bitcoin
+
+32
+00:00:53,467 --> 00:00:55,300
+and the data source is X —
+
+33
+00:00:55,300 --> 00:00:56,367
+top minds.
+
+34
+00:00:56,367 --> 00:00:58,400
+More assets and data sources
+
+35
+00:00:58,400 --> 00:00:59,267
+are coming soon.
+
+36
+00:00:59,267 --> 00:01:00,500
+Let's ask:
+
+37
+00:01:00,500 --> 00:01:01,967
+"Is Elon bullish?"
+
+38
+00:01:01,967 --> 00:01:04,200
+We're measuring how bullish
+
+39
+00:01:04,200 --> 00:01:06,033
+Elon's sentiment has been
+over time
+
+40
+00:01:06,033 --> 00:01:07,333
+and whether that maps
+
+41
+00:01:07,333 --> 00:01:08,233
+to price movement.
+
+42
+00:01:08,233 --> 00:01:09,600
+I'll hit submit.
+
+43
+00:01:09,600 --> 00:01:12,200
+The app is now scanning signals,
+
+44
+00:01:12,200 --> 00:01:13,600
+analyzing mentions,
+
+45
+00:01:13,600 --> 00:01:15,533
+and building out
+the sentiment chart.
+
+46
+00:01:15,533 --> 00:01:16,800
+Here we go.
+
+47
+00:01:16,800 --> 00:01:18,067
+Three charts.
+
+48
+00:01:18,067 --> 00:01:19,467
+First:
+
+49
+00:01:19,467 --> 00:01:20,733
+the correlation between
+
+50
+00:01:20,733 --> 00:01:21,933
+our question's sentiment
+
+51
+00:01:21,933 --> 00:01:23,533
+and Bitcoin price moves.
+
+52
+00:01:23,533 --> 00:01:25,900
+We're seeing 10.9%,
+
+53
+00:01:25,900 --> 00:01:27,733
+which is actually
+quite significant.
+
+54
+00:01:27,733 --> 00:01:30,200
+Second: the P&L.
+
+55
+00:01:30,200 --> 00:01:31,867
+Trading this strategy
+
+56
+00:01:31,867 --> 00:01:33,300
+with the paper trading capital
+
+57
+00:01:33,300 --> 00:01:34,100
+in my account
+
+58
+00:01:34,100 --> 00:01:37,133
+would have produced
+$30,000 in profit.
+
+59
+00:01:37,133 --> 00:01:39,967
+Every user gets
+paper trading capital
+
+60
+00:01:39,967 --> 00:01:41,067
+to test strategies
+
+61
+00:01:41,067 --> 00:01:42,467
+without risking real money.
+
+62
+00:01:42,467 --> 00:01:45,133
+Third: the actual trades.
+
+63
+00:01:45,133 --> 00:01:46,633
+Every position —
+
+64
+00:01:46,633 --> 00:01:50,100
+long, short, closed, reverse —
+
+65
+00:01:50,100 --> 00:01:52,533
+all driven by
+the sentiment question
+
+66
+00:01:52,533 --> 00:01:53,133
+you created.
+
+67
+00:01:53,133 --> 00:01:54,733
+In this case,
+
+68
+00:01:54,733 --> 00:01:56,733
+three out of three
+winning trades.
+
+69
+00:01:56,733 --> 00:01:58,600
+If you like the result,
+
+70
+00:01:58,600 --> 00:01:59,967
+click Paper Trade
+
+71
+00:01:59,967 --> 00:02:01,333
+to take the strategy live.
+
+72
+00:02:01,333 --> 00:02:03,533
+The algorithm now monitors
+
+73
+00:02:03,533 --> 00:02:04,833
+conditions in real time,
+
+74
+00:02:04,833 --> 00:02:06,767
+and when it finds
+the right edge,
+
+75
+00:02:06,767 --> 00:02:08,700
+trades execute automatically.
+
+76
+00:02:08,700 --> 00:02:10,833
+Since we just activated,
+
+77
+00:02:10,833 --> 00:02:12,300
+there are no trades yet —
+
+78
+00:02:12,300 --> 00:02:14,100
+but once conditions align,
+
+79
+00:02:14,100 --> 00:02:14,967
+it will start.
+
+80
+00:02:14,967 --> 00:02:17,267
+You can check back
+on this strategy
+
+81
+00:02:17,267 --> 00:02:18,000
+at any time.
+
+82
+00:02:18,000 --> 00:02:20,433
+You can grow your
+paper trading capital
+
+83
+00:02:20,433 --> 00:02:21,800
+by sharing an invite link
+
+84
+00:02:21,800 --> 00:02:23,000
+to bring in new users,
+
+85
+00:02:23,000 --> 00:02:25,167
+or by sharing a trading card
+
+86
+00:02:25,167 --> 00:02:26,900
+that shows your expected P&L.
+
+87
+00:02:26,900 --> 00:02:28,800
+Both boost your points
+
+88
+00:02:28,800 --> 00:02:29,667
+and your capital.
+
+89
+00:02:29,667 --> 00:02:32,000
+Your dashboard shows everything:
+
+90
+00:02:32,000 --> 00:02:33,767
+ongoing strategies,
+
+91
+00:02:33,767 --> 00:02:34,967
+trade monitoring,
+
+92
+00:02:34,967 --> 00:02:37,200
+and the history of all
+the questions
+
+93
+00:02:37,200 --> 00:02:37,800
+you've tested.
+
+94
+00:02:37,800 --> 00:02:40,100
+You can run multiple strategies
+
+95
+00:02:40,100 --> 00:02:41,400
+and compare performance.
+
+96
+00:02:41,400 --> 00:02:43,233
+There's also a leaderboard
+
+97
+00:02:43,233 --> 00:02:44,133
+ranked by invites
+
+98
+00:02:44,133 --> 00:02:45,433
+and strategy performance.
+
+99
+00:02:45,433 --> 00:02:47,733
+You earn capital boosts —
+
+100
+00:02:47,733 --> 00:02:49,600
+50K and 100K —
+
+101
+00:02:49,600 --> 00:02:51,233
+by testing strategies,
+
+102
+00:02:51,233 --> 00:02:52,633
+sharing trading cards,
+
+103
+00:02:52,633 --> 00:02:53,700
+and inviting users.
+
+104
+00:02:53,700 --> 00:02:55,200
+That's Xentiment.
+
+105
+00:02:55,200 --> 00:02:56,767
+Ask a question,
+
+106
+00:02:56,767 --> 00:02:58,000
+find the correlation,
+
+107
+00:02:58,000 --> 00:02:59,300
+trade the sentiment.
+

@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:01,367
+For the new builder,
+
+2
+00:00:01,367 --> 00:00:02,333
+what are some resources
+
+3
+00:00:02,333 --> 00:00:04,167
+that you would point them towards,
+
+4
+00:00:04,167 --> 00:00:04,833
+whether it's a journey
+
+5
+00:00:04,833 --> 00:00:06,267
+in tactile fashion industry
+
+6
+00:00:06,267 --> 00:00:08,033
+or a journey in engineering?
+
+7
+00:00:08,033 --> 00:00:09,033
+Like I just think like Claude,
+
+8
+00:00:09,033 --> 00:00:10,167
+go ask Claude a question
+
+9
+00:00:10,167 --> 00:00:11,233
+and it will break
+
+10
+00:00:11,233 --> 00:00:11,833
+it down for you.
+
+11
+00:00:11,833 --> 00:00:12,433
+Like I've started
+
+12
+00:00:12,433 --> 00:00:13,667
+doing Solana programs,
+
+13
+00:00:13,667 --> 00:00:15,033
+which I've never done before.
+
+14
+00:00:15,033 --> 00:00:16,233
+I just talk
+
+15
+00:00:16,233 --> 00:00:17,466
+with Claude through everything,
+
+16
+00:00:17,466 --> 00:00:18,400
+like not necessarily
+
+17
+00:00:18,400 --> 00:00:19,433
+have it make the code,
+
+18
+00:00:19,433 --> 00:00:20,266
+like something just after that,
+
+19
+00:00:20,266 --> 00:00:20,900
+when you're doing stuff
+
+20
+00:00:20,900 --> 00:00:21,533
+with smart contracts.
+
+21
+00:00:21,533 --> 00:00:22,366
+I would highly recommend
+
+22
+00:00:22,366 --> 00:00:23,433
+not by coding those,
+
+23
+00:00:23,433 --> 00:00:24,233
+but just being able
+
+24
+00:00:24,233 --> 00:00:24,966
+to understand it
+
+25
+00:00:24,966 --> 00:00:25,933
+and have Claude break it
+
+26
+00:00:25,933 --> 00:00:27,633
+down for you is incredibly...
+
+27
+00:00:27,633 --> 00:00:28,433
+It's so useful.
+
+28
+00:00:28,433 --> 00:00:29,466
+I wish I had that
+
+29
+00:00:29,466 --> 00:00:30,066
+back in the day.

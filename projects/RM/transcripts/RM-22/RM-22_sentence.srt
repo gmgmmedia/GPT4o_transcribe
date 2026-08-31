@@ -1,0 +1,80 @@
+1
+00:00:00,000 --> 00:00:01,467
+150,000 now,
+
+2
+00:00:01,467 --> 00:00:02,567
+soon to be a million.
+
+3
+00:00:02,567 --> 00:00:03,533
+Walk me through this process.
+
+4
+00:00:03,533 --> 00:00:04,833
+We're not a traditional blockchain.
+
+5
+00:00:04,833 --> 00:00:05,533
+We're kind of married together
+
+6
+00:00:05,533 --> 00:00:07,000
+two pieces of technology.
+
+7
+00:00:07,000 --> 00:00:07,867
+One is a new implementation
+
+8
+00:00:07,867 --> 00:00:09,167
+of a really fast network
+
+9
+00:00:09,167 --> 00:00:10,467
+that's capable, that can still
+
+10
+00:00:10,467 --> 00:00:11,333
+prevent double spend.
+
+11
+00:00:11,333 --> 00:00:13,267
+Then separately, this verification framework
+
+12
+00:00:13,267 --> 00:00:14,467
+that can verify
+
+13
+00:00:14,467 --> 00:00:15,567
+virtual machine state
+
+14
+00:00:15,567 --> 00:00:17,167
+and programming languages like Solidity.
+
+15
+00:00:17,167 --> 00:00:17,967
+So when you marry
+
+16
+00:00:17,967 --> 00:00:18,767
+the two of them together,
+
+17
+00:00:18,767 --> 00:00:19,200
+you have this
+
+18
+00:00:19,200 --> 00:00:19,967
+really great system
+
+19
+00:00:19,967 --> 00:00:21,333
+that's like really optimized
+
+20
+00:00:21,333 --> 00:00:22,833
+for something like agentic payments.
+

@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:00,933
+And if you could describe
+
+2
+00:00:00,933 --> 00:00:01,767
+it to someone who's maybe
+
+3
+00:00:01,767 --> 00:00:02,833
+not crypto native,
+
+4
+00:00:02,833 --> 00:00:03,700
+how would you describe
+
+5
+00:00:03,700 --> 00:00:04,533
+the product that you guys
+
+6
+00:00:04,533 --> 00:00:05,267
+are offering us?
+
+7
+00:00:05,267 --> 00:00:05,833
+We work a lot
+
+8
+00:00:05,833 --> 00:00:07,133
+with financial institutions.
+
+9
+00:00:07,133 --> 00:00:07,633
+They want to get
+
+10
+00:00:07,633 --> 00:00:08,467
+in blockchain.
+
+11
+00:00:08,467 --> 00:00:09,533
+It's a complicated world.
+
+12
+00:00:09,533 --> 00:00:10,367
+So we are the ones
+
+13
+00:00:10,367 --> 00:00:11,333
+that are bridging like
+
+14
+00:00:11,333 --> 00:00:12,200
+the Web2 world
+
+15
+00:00:12,200 --> 00:00:13,067
+to the Web3 world,
+
+16
+00:00:13,067 --> 00:00:14,033
+by building all of
+
+17
+00:00:14,033 --> 00:00:15,000
+the like tech stack
+
+18
+00:00:15,000 --> 00:00:16,267
+that makes that possible.
+
+19
+00:00:16,267 --> 00:00:16,867
+So it means that
+
+20
+00:00:16,867 --> 00:00:17,900
+we design all of
+
+21
+00:00:17,900 --> 00:00:19,267
+the smart contracts,
+
+22
+00:00:19,267 --> 00:00:20,333
+algorithms onchain,
+
+23
+00:00:20,333 --> 00:00:21,167
+and plug it to
+
+24
+00:00:21,167 --> 00:00:22,033
+their like infrastructure
+
+25
+00:00:22,033 --> 00:00:23,367
+to be able to run
+
+26
+00:00:23,367 --> 00:00:24,233
+this stablecoin.

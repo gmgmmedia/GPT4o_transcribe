@@ -1,0 +1,75 @@
+1
+00:00:00,000 --> 00:00:00,800
+If somebody's looking
+
+2
+00:00:00,800 --> 00:00:02,067
+to get more research,
+
+3
+00:00:02,067 --> 00:00:02,700
+maybe they want to work
+
+4
+00:00:02,700 --> 00:00:03,467
+in security,
+
+5
+00:00:03,467 --> 00:00:04,367
+what would be some recommendations
+
+6
+00:00:04,367 --> 00:00:05,433
+that you think might help
+
+7
+00:00:05,433 --> 00:00:06,500
+them around the road?
+
+8
+00:00:06,500 --> 00:00:07,567
+Specialized conferences,
+
+9
+00:00:07,567 --> 00:00:08,567
+a lot of security experts
+
+10
+00:00:08,567 --> 00:00:09,267
+are there,
+
+11
+00:00:09,267 --> 00:00:09,933
+really really experts
+
+12
+00:00:09,933 --> 00:00:10,700
+in the field.
+
+13
+00:00:10,700 --> 00:00:11,433
+They can get from
+
+14
+00:00:11,433 --> 00:00:12,667
+different security issues
+
+15
+00:00:12,667 --> 00:00:13,433
+of the smart contracts
+
+16
+00:00:13,433 --> 00:00:14,133
+and how to help them
+
+17
+00:00:14,133 --> 00:00:14,767
+in that regard.
+
+18
+00:00:14,767 --> 00:00:15,300
+Offchain threats
+
+19
+00:00:15,300 --> 00:00:16,233
+where companies are getting targeted.

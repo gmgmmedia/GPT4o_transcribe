@@ -1,0 +1,88 @@
+1
+00:00:00,000 --> 00:00:01,400
+Agentic swarm start needing
+
+2
+00:00:01,400 --> 00:00:02,800
+to communicate with one another,
+
+3
+00:00:02,800 --> 00:00:03,267
+needing to transact
+
+4
+00:00:03,267 --> 00:00:03,933
+with one another.
+
+5
+00:00:03,933 --> 00:00:05,733
+The architecture required for that.
+
+6
+00:00:05,733 --> 00:00:06,667
+Sounds like what you're saying
+
+7
+00:00:06,667 --> 00:00:07,667
+is it's pi squared.
+
+8
+00:00:07,667 --> 00:00:08,267
+Yeah, exactly.
+
+9
+00:00:08,267 --> 00:00:09,367
+So we truly believe
+
+10
+00:00:09,367 --> 00:00:10,400
+that we're like the first
+
+11
+00:00:10,400 --> 00:00:12,133
+optimal architecture for
+
+12
+00:00:12,133 --> 00:00:13,633
+agentic payments that we've seen.
+
+13
+00:00:13,633 --> 00:00:14,633
+Centralized payment systems
+
+14
+00:00:14,633 --> 00:00:15,700
+still have issues.
+
+15
+00:00:15,700 --> 00:00:17,133
+Google has something called UCP.
+
+16
+00:00:17,133 --> 00:00:17,767
+They have these like
+
+17
+00:00:17,767 --> 00:00:18,967
+agentic frameworks, but there's
+
+18
+00:00:18,967 --> 00:00:19,933
+no infrastructure for it.
+
+19
+00:00:19,933 --> 00:00:20,600
+So I think they're waiting
+
+20
+00:00:20,600 --> 00:00:21,233
+for the market to
+
+21
+00:00:21,233 --> 00:00:21,967
+solve that, and we believe
+
+22
+00:00:21,967 --> 00:00:22,433
+we're the solution.
+

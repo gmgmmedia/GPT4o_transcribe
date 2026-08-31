@@ -189,6 +189,11 @@ Group the raw Whisper words into chunks of 3-5 words at logical phrase boundarie
    - Before conjunctions ("and", "but", "so", "because")
    - Before prepositions ("for", "with", "in", "on", "to")
    - Before articles starting new phrases ("the", "a")
+   - **NEVER split noun phrases**: Modifiers must stay with the noun they modify:
+     - Adjective + noun: "real infrastructure", "bad data", "sandboxed environments"
+     - Possessive + noun: "their AI", "your agent", "my portfolio"
+     - Compound nouns: "nation states", "bear market", "hype cycles"
+     - If a chunk would end on an adjective/possessive and the next starts with its noun, pull the noun into the current chunk (even if it makes 6 words) or push the modifier to the next chunk
 3. **Concatenate** corrected words in each group with spaces
 4. **Timestamps**: start = first word's start time, end = last word's end time
 

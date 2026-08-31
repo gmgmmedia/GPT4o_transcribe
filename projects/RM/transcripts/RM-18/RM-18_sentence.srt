@@ -1,0 +1,120 @@
+1
+00:00:00,000 --> 00:00:00,933
+Blockchain and AI
+
+2
+00:00:00,933 --> 00:00:01,967
+are coming together,
+
+3
+00:00:01,967 --> 00:00:02,833
+industries are merging.
+
+4
+00:00:02,833 --> 00:00:03,433
+Where do you see
+
+5
+00:00:03,433 --> 00:00:04,367
+as being the bottlenecks?
+
+6
+00:00:04,367 --> 00:00:05,800
+It's all about verified data.
+
+7
+00:00:05,800 --> 00:00:06,700
+AI is in
+
+8
+00:00:06,700 --> 00:00:08,033
+very sandboxed environments.
+
+9
+00:00:08,033 --> 00:00:09,267
+You go to ChatGPT.com
+
+10
+00:00:09,267 --> 00:00:10,933
+and nothing really leaves there.
+
+11
+00:00:10,933 --> 00:00:11,767
+Recently we've seen things
+
+12
+00:00:11,767 --> 00:00:13,333
+like OpenCloth, where AI
+
+13
+00:00:13,333 --> 00:00:14,267
+sort of interacts outside
+
+14
+00:00:14,267 --> 00:00:15,667
+of these sandbox environments.
+
+15
+00:00:15,667 --> 00:00:16,633
+Things start going wrong.
+
+16
+00:00:16,633 --> 00:00:17,333
+People start attacking
+
+17
+00:00:17,333 --> 00:00:18,633
+your specific agent.
+
+18
+00:00:18,633 --> 00:00:19,333
+The question we start
+
+19
+00:00:19,333 --> 00:00:20,367
+asking is, how can we
+
+20
+00:00:20,367 --> 00:00:21,300
+verify where this data
+
+21
+00:00:21,300 --> 00:00:22,000
+was trained on?
+
+22
+00:00:22,000 --> 00:00:22,833
+Because there is now
+
+23
+00:00:22,833 --> 00:00:23,833
+a very real incentive
+
+24
+00:00:23,833 --> 00:00:25,667
+to start sending bad data
+
+25
+00:00:25,667 --> 00:00:26,367
+to, let's say,
+
+26
+00:00:26,367 --> 00:00:27,633
+your competitors, or to
+
+27
+00:00:27,633 --> 00:00:28,267
+other nation states,
+
+28
+00:00:28,267 --> 00:00:29,233
+and try to influence
+
+29
+00:00:29,233 --> 00:00:29,800
+the decisions that
+
+30
+00:00:29,800 --> 00:00:30,633
+their AI makes.
+

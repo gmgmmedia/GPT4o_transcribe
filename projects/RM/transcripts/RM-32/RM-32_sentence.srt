@@ -1,0 +1,93 @@
+1
+00:00:00,000 --> 00:00:01,000
+What sets BP apart
+
+2
+00:00:01,000 --> 00:00:01,700
+from the competition?
+
+3
+00:00:01,700 --> 00:00:03,133
+Well, we've been around
+a long time.
+
+4
+00:00:03,133 --> 00:00:04,533
+So we focus most
+on security,
+
+5
+00:00:04,533 --> 00:00:05,867
+never had a
+security incident,
+
+6
+00:00:05,867 --> 00:00:07,200
+have a lot of
+security partners.
+
+7
+00:00:07,200 --> 00:00:08,800
+We're going to now have
+
+8
+00:00:08,800 --> 00:00:09,667
+some sort of insurance.
+
+9
+00:00:09,667 --> 00:00:10,767
+So everybody who deposits in,
+
+10
+00:00:10,767 --> 00:00:12,700
+you'll have some base level
+
+11
+00:00:12,700 --> 00:00:13,900
+of insurance against
+smart contract.
+
+12
+00:00:13,900 --> 00:00:15,100
+At the same time,
+
+13
+00:00:15,100 --> 00:00:16,000
+there's a good dashboard.
+
+14
+00:00:16,000 --> 00:00:17,467
+You can see all
+your historical
+
+15
+00:00:17,467 --> 00:00:18,233
+profit and loss,
+
+16
+00:00:18,233 --> 00:00:19,333
+see how you're measuring up
+
+17
+00:00:19,333 --> 00:00:20,433
+against your other investments.
+
+18
+00:00:20,433 --> 00:00:22,167
+So it's like one easy
+
+19
+00:00:22,167 --> 00:00:24,167
+to use and feel safe
+
+20
+00:00:24,167 --> 00:00:24,667
+sort of app,
+
+21
+00:00:24,667 --> 00:00:25,900
+yield generation across
+
+22
+00:00:25,900 --> 00:00:26,233
+multiple chains.
